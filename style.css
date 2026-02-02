@@ -1,0 +1,18 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+div{
+    color:red;
+}
+
+#d1{
+    color: blue;
+}
+
+.c1{
+    color: green;
+}
+
+#external{
+    font-family: cursive;
+}

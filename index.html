@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #internal {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, 'Arial Narrow', Arial, sans-serif;
+        }
+        #bg-img {
+            width: 500px;
+            height: 500px;
+            background-image: url("img/small.jpg");
+        }
+        #bg-img-repX{
+            width: 500px;
+            height: 500px;
+            background-image: url("img/small.jpg");
+            background-repeat: repeat-x;
+            border: 2px solid black;
+        }
+        #bg-img-repY{
+            width: 500px;
+            height: 500px;
+            background-image: url("img/small.jpg");
+            background-repeat: repeat-y;
+            border: 2px solid black;
+        }
+        #bg-img-no-rep{
+            width: 500px;
+            height: 500px;
+            background-image: url("img/small.jpg");
+            background-repeat: no-repeat;
+            border: 2px solid black;
+        }
+        #bg-img-no-rep-pos{
+            width: 500px;
+            height: 500px;
+            background-image: url("img/small.jpg");
+            background-repeat: no-repeat;
+            background-position: right bottom;
+            border: 2px solid black;
+        }
+        li {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="selectors">
+        <h1>Types of selectors</h1>
+        <ol type="1">
+            <div>
+                <h3>
+                    <li>Element Selector : Extension used to save external CSS files is <b>.css</b></li>
+                </h3>
+            </div>
+            <div id="d1">
+                <li>
+                    ID Selector : <abbr title="Cascading Style Sheet">CSS</abbr> : It describes how the HTML elements
+                    are to be displayed on screen or in other media.
+                </li>
+            </div>
+            <div class="c1">
+                <h3>
+                    <li>CSS saves lots of work. Multiple pages can be styled using CSS.</li>
+                </h3>
+            </div>
+            <div>
+                <h3>
+                    <li>Universal Selector : Font Family Provided.</li>
+                </h3>
+            </div>
+        </ol>
+    </section>
+    <section id="types">
+        <h1>Types of stylesheets</h1>
+        <ol>
+            <li style="font-family: 'Courier New', Courier, monospace;">
+                Inline CSS : Most prioritized type of stylesheet written within HTML tag. [Not recommended creates messy
+                code]
+            </li>
+            <li id="internal">
+                Internal CSS : Least prioritized type of stylesheet written within HTML file. [Usefull for single page
+                designing not recommended for project].
+            </li>
+            <li id="external">
+                External CSS : Second prioritized type of stylesheet written outside HTML file using .css extension file
+                has been created and linked to HTML page using <b>&lt;link&gt;</b>.
+            </li>
+        </ol>
+    </section>
+    <section id="comments">
+        <h3>CSS comments can be written as /* */ for single and multi lines both are same.</h3>
+    </section>
+    <section id="colors">
+        <h1>Types of colors</h1>
+        <ol>
+            <li>Direct Color Names Like : <b style="color: mediumseagreen;">Mediumseagreen</b>, <b
+                    style="color: violet;">Violet</b>, <b style="color: blue;">Blue</b></li>
+            <li>Using rgb like : <b style="color: rgb(200,0,0);">RED : 200, GREEN : 0, BLUE : 0</b></li>
+            <li>Using rgba like : <b style="color: rgba(0, 0, 250, 0.5);">RED : 0, GREEN : 0, BLUE : 250, ALPHA
+                    (OPACITY) : 0.5</b></li>
+            <li>Using hex values like : <b style="color: #ff0000;">#ff0000 - ff:MAX 00:MIN</b></li>
+            <li>Using hsl values like : <b style="color: hsl(180, 50%, 20%);">HUE : 180 <sup><small>o</small></sup>,
+                    SATURATION : 50%, LIGHTNESS : 20%</b></li>
+            <li>Using hsla values like : <b style="color: hsla(180, 50%, 20%, 0.8);">HUE : 180
+                    <sup><small>o</small></sup>, SATURATION : 50%, LIGHTNESS : 20%, ALPHA (OPACITY) : 0.8</b></li>
+        </ol>
+    </section>
+    <section id="bg-props">
+        <h1>Background properties</h1>
+        <ol>
+            <li>
+                <h3>background-color : </h3>
+                <div style="background-color: green; color: white;">
+                    This is background color property used.
+                </div>
+            </li>
+            <li>
+                <h3>background-image (default) :</h3>
+                <div id="bg-img"></div>
+                <h3>background-image (repeatX)</h3>
+                <div id="bg-img-repX"></div>
+                <h3>background-image (repeatY)</h3>
+                <div id="bg-img-repY"></div>
+                <h3>background-image (no-repeat)</h3>
+                <div id="bg-img-no-rep"></div>
+            </li>
+            <li>
+                <h3>background-image (no-repeat), position : top, left, right, bottom, right top, right bottom, left top, left bottom. <br>Current : right-bottom</h3>
+                <div id="bg-img-no-rep-pos"></div>
+            </li>
+            <li>
+                <h3>background-attachment : scroll (default) or fixed.</h3>
+                <iframe src="bg-attach.html"></iframe>
+            </li>
+        </ol>
+    </section>
+</body>
+
+</html>
