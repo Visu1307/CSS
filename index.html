@@ -54,27 +54,27 @@
     <section id="selectors">
         <h1>Types of selectors</h1>
         <ol type="1">
-            <div>
+            <!-- <div> -->
                 <h3>
                     <li>Element Selector : Extension used to save external CSS files is <b>.css</b></li>
                 </h3>
-            </div>
-            <div id="d1">
-                <li>
+            <!-- </div> -->
+            <!-- <div id="d1"> -->
+                <li id="d1">
                     ID Selector : <abbr title="Cascading Style Sheet">CSS</abbr> : It describes how the HTML elements
                     are to be displayed on screen or in other media.
                 </li>
-            </div>
-            <div class="c1">
-                <h3>
-                    <li>CSS saves lots of work. Multiple pages can be styled using CSS.</li>
+            <!-- </div> -->
+            <!-- <div class="c1"> -->
+                <h3 class="c1">
+                    <li>Class Selector : CSS saves lots of work. Multiple pages can be styled using CSS.</li>
                 </h3>
-            </div>
-            <div>
+            <!-- </div> -->
+            <!-- <div> -->
                 <h3>
                     <li>Universal Selector : Font Family Provided.</li>
                 </h3>
-            </div>
+            <!-- </div> -->
         </ol>
     </section>
     <section id="types">
@@ -140,6 +140,53 @@
                 <iframe src="bg-attach.html"></iframe>
             </li>
         </ol>
+    </section>
+    <section id="borders">
+        <h1>Borders</h1>
+        <div style="border: 2px solid black; margin-top: 10px; color:unset">Border 2px Solid Black</div>
+        <div style="border: 2px dotted black; margin-top: 10px; color:unset">Border 2px Dotted Black</div>
+        <div style="border: 2px dashed black; margin-top: 10px; color:unset">Border 2px Dashed Black</div>
+        <div style="border: 5px solid; border-color: red blue; height: 100px; margin-top: 10px;">Border 2px Solid Red & Blue</div>
+        <div style="border: 5px solid; border-color: red green blue yellow; height: 100px; margin-top: 10px;">Border 2px Solid Red, Green, Blue, Yellow</div>
+        <div style="border: 5px solid; border-color: black; border-radius: 20px; height: 100px; margin-top: 10px;">Rounded Corners Using Border Radius 20px</div>
+    </section>
+    <section id="margin">
+        <h1>Margins</h1>
+        <div style="margin: 20px; border: 2px solid black; height: 50px; width: 200px;">Full Margin 20px</div>
+        <div style="margin-top: 20px; border: 2px solid black; height: 50px; width: 200px;">Top Margin 20px</div>
+        <div style="margin-right: 20px; border: 2px solid black; height: 50px; width: 200px;">Right Margin 20px</div>
+        <div style="margin-bottom: 20px; border: 2px solid black; height: 50px; width: 200px;">Bottom Margin 20px</div>
+        <div style="margin-left: 20px; border: 2px solid black; height: 50px; width: 200px;">Left Margin 20px</div>
+        <div style="margin: 20px 40px; border: 2px solid black; height: 50px; width: 200px;">Top & Bottom Margin 20px, Left & Right Margin 40px</div>
+        <div style="margin: 10px 20px 30px 40px; border: 2px solid black; height: 50px; width: 200px;">Top 10px, Right 20px, Bottom 30px, Left 40px</div>
+    </section>
+    <section id="padding">
+        <h1>Padding</h1>
+        <div style="padding: 50px; border: 2px solid black; margin-top: 20px;">This content is 50px fully padded.</div>
+        <div style="padding-top: 50px; border: 2px solid black; margin-top: 20px;">This content is 50px top padded.</div>
+        <div style="padding-right: 50px; border: 2px solid black; margin-top: 20px;">This content is 50px right padded.</div>
+        <div style="padding-left: 50px; border: 2px solid black; margin-top: 20px;">This content is 50px left padded.</div>
+        <div style="padding-bottom: 50px; border: 2px solid black; margin-top: 20px;">This content is 50px bottom padded.</div>
+        <div style="padding : 50px 80px; border: 2px solid black; margin-top: 20px;">This content is 50px top-bottom padded & 80px left-right padded.</div>
+        <div style="padding : 40px 50px 60px 70px;  border: 2px solid black; margin-top: 20px;">This content is top 40px, right 50px, bottom 60px, and left 70px padded.</div>
+    </section>
+    <section>
+        <h1>Height</h1>
+        <div style="height: 10px; border: 2px solid black;">This div has height of 10px</div>
+        <div style="height: 100%; border: 2px solid black;">This div has height of 100%</div>
+        <div style="height: 10rem; border: 2px solid black;">This div has height of 10rem</div>
+        <div style="height: 10cm; border: 2px solid black;">This div has height of 10cm</div>
+        <div style="min-height: 100px; height: 50px; border: 2px solid black;">This div has min-height of 100px given 50px prevents smaller than 100px.</div>
+        <div style="max-height: 100px; height: 150px; border: 2px solid black;">This div has max-height of 100px given 150px prevents bigger than 100px.</div>
+    </section>
+    <section>
+        <h1>Width</h1>
+        <div style="width: 100px; border: 2px solid black;">This div has width of 100px</div>
+        <div style="width: 100%; border: 2px solid black;">This div has width of 100%</div>
+        <div style="width: 10rem; border: 2px solid black;">This div has width of 10rem</div>
+        <div style="width: 10cm; border: 2px solid black;">This div has width of 10cm</div>
+        <div style="min-width: 200px; width: 50px; border: 2px solid black;">This div has min-width of 200px given 50px prevents smaller than 200px.</div>
+        <div style="max-width: 200px; width: 250px; border: 2px solid black;">This div has max-width of 200px given 250px prevents bigger than 200px.</div>
     </section>
 </body>
 

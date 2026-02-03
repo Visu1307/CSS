@@ -1,8 +1,11 @@
 *{
     font-family: 'Times New Roman', Times, serif;
 }
+
 div{
-    color:red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #d1{
