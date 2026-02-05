@@ -1,0 +1,162 @@
+<html>
+
+<head>
+	<title>CSS Demo</title>
+	<style>
+		* {
+			margin: 0;
+		}
+
+		nav {
+			font-size: large;
+			color: white;
+			font-weight: bolder;
+			background-color: rgba(0, 0, 0, 0.8);
+		}
+
+		ul {
+			display: flex;
+			gap: 25px;
+			padding: 20px;
+		}
+
+		aside {
+			height: 100vh;
+			width: 15%;
+			background-color: rgba(128, 128, 128, 0.486);
+			padding: 10px;
+			text-align: center;
+		}
+
+		.d-flex {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			margin-top: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<nav>
+		<ul type="none">
+			<li>HTML</li>
+			<li>CSS</li>
+			<li>Javascript</li>
+			<li>SQL</li>
+			<li>Python</li>
+			<li>Java</li>
+		</ul>
+	</nav>
+	<aside>
+		<div class="d-flex">
+			<div><img width="50" height="50" src="https://img.icons8.com/ios/50/css.png" alt="css" /></div>
+			<div>
+				<h3>Tutorials</h3>
+			</div>
+		</div>
+		<div class="d-flex" style="margin-top: 20px;">
+			<div>
+				<img width="25" height="25" src="https://img.icons8.com/ios/50/home--v1.png" alt="home--v1"/>
+			</div>
+			<div>CSS Home</div>
+		</div>
+		<div class="d-flex">
+			<div><img width="25" height="25"
+					src="https://img.icons8.com/external-icongeek26-outline-icongeek26/64/external-play-essentials-icongeek26-outline-icongeek26.png"
+					alt="external-play-essentials-icongeek26-outline-icongeek26" /></div>
+			<div>CSS Introduction</div>
+		</div>
+		<div class="d-flex">
+			<div><img width="25" height="25" src="https://img.icons8.com/ios/50/curly-brackets.png"
+					alt="curly-brackets" /></div>
+			<div>CSS Syntax</div>
+		</div>
+		<div class="d-flex">
+			<div><img width="24" height="24"
+					src="https://img.icons8.com/external-tal-revivo-light-tal-revivo/24/external-hypertext-markup-language-programming-for-web-pages-and-application-text-light-tal-revivo.png"
+					alt="external-hypertext-markup-language-programming-for-web-pages-and-application-text-light-tal-revivo" />
+			</div>
+			<div id="selectors">CSS Selectors</div>
+		</div>
+		<div class="d-flex">
+			<div><img width="25" height="25" src="https://img.icons8.com/ios/50/how-quest--v2.png"
+					alt="how-quest--v2" /></div>
+			<div>CSS How To</div>
+		</div>
+		<div class="d-flex">
+			<div><img width="25" height="25" src="https://img.icons8.com/ios/50/comments--v1.png"
+					alt="comments--v1" /></div>
+			<div>CSS Comments</div>
+		</div>
+		<div class="d-flex">
+			<div><img width="25" height="25" src="https://img.icons8.com/ios/50/error--v1.png"
+					alt="error--v1" /></div>
+			<div>CSS Errors</div>
+		</div>
+		<div class="d-flex">
+			<div><img width="25" height="25"
+					src="https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/58/external-colors-photography-vitaliy-gorbachev-flat-vitaly-gorbachev.png"
+					alt="external-colors-photography-vitaliy-gorbachev-flat-vitaly-gorbachev" /></div>
+			<div>CSS Colors</div>
+		</div>
+		<div class="d-flex">
+			<div><img width="25" height="25"
+					src="https://img.icons8.com/external-others-cattaleeya-thongsriphong/64/external-background-advertising-outline-others-cattaleeya-thongsriphong-22.png"
+					alt="external-background-advertising-outline-others-cattaleeya-thongsriphong-22" /></div>
+			<div>CSS Background</div>
+		</div>
+		<div class="d-flex">
+			<div><img width="24" height="24"
+					src="https://img.icons8.com/external-tal-revivo-filled-tal-revivo/24/external-inside-borders-worksheet-highlight-cell-section-button-table-filled-tal-revivo.png"
+					alt="external-inside-borders-worksheet-highlight-cell-section-button-table-filled-tal-revivo" />
+			</div>
+			<div>CSS Borders</div>
+		</div>
+		<div class="d-flex">
+			<div><img width="24" height="24"
+					src="https://img.icons8.com/material-outlined/24/dashboard-layout.png" alt="dashboard-layout" />
+			</div>
+			<div>CSS Margins</div>
+		</div>
+		<div class="d-flex">
+			<div><img width="25" height="25"
+					src="https://img.icons8.com/external-tal-revivo-duo-tal-revivo/25/external-focused-image-expanded-with-text-body-layout-template-wireframe-duo-tal-revivo.png"
+					alt="external-focused-image-expanded-with-text-body-layout-template-wireframe-duo-tal-revivo" />
+			</div>
+			<div>CSS Padding</div>
+		</div>
+		<div class="d-flex">
+			<div><img width="25" height="25" src="https://img.icons8.com/ios/50/surface.png"
+					alt="surface" /></div>
+			<div>CSS Height/Width</div>
+		</div>
+	</aside>
+</body>
+<script>
+	var selectorFlag = false;
+	var listSelector = ["Element","ID","Class","Universal"];
+	const newList = document.createElement("ul");
+	const newData = document.createElement("li");
+	listSelector.forEach(element => {
+		document.createElement(document.textContent="Hello")
+	});
+	console.log(newData);
+	listSelector.forEach(element => {
+		newList.appendChild(document.createElement("li"));
+	});
+	console.log(newList);
+	const selectors = document.getElementById("selectors");
+	selectors.addEventListener('click', () => {
+		if(selectorFlag==false){
+			selectors.parentElement.after(newList);
+			selectorFlag=true;
+		}
+		else{
+			newList.remove();
+			selectorFlag=false;	
+		}
+	})
+</script>
+
+</html>

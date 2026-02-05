@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            background-color: beige;
+            color: brown;
+            font-size: larger;
+            font-weight: 500;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        th{
+            background-color: azure
+        }
+        td{
+            color: white;
+            background-color: bisque
+        }
+        table,th,td{
+            color: black;
+            margin: 5px;
+            padding: 10px;
+            font-size: larger;
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <header style="background-color: brown; color: white;">
+        <h1 style="text-align: center; margin: 0;">CSS Docs</h1>
+    </header>
+    <hr>
+    <h3>CSS3 (NOT a single version)</h3>
+    <p>This is where the big change happened.</p>
+    <p>CSS3 has been divided into seperate modules.</p>
+    <p>Each module evolves seperately.</p>
+    <hr>
+    <h3>Major CSS 3 Modules</h3>
+    <ul>
+        <!-- <li>Selectors Level 3</li> -->
+        <li>Media Queries (Responsive Design)</li>
+        <li>Flexbox</li>
+        <li>Grid</li>
+        <li>Animations & Transitions</li>
+        <li>Border-radius</li>
+        <li>Box-shadow</li>
+        <li>Gradients</li>
+        <li>Transform (2D / 3D)</li>
+    </ul>
+    <hr>
+    <h3>Mordern Features</h3>
+    <ul>
+        <li>CSS Grid (Layout system)</li>
+        <li>Flexbox (One-dimensional layout)</li>
+        <li>Custom Properties (CSS Variables)</li>
+        <li>:is(), :where()</li>
+        <li>clamp(), min(), max()</li>
+        <li>Container Queries</li>
+        <li>Logical properties (margin-inline, etc.)</li>
+    </ul>
+    <hr>
+    <section id="differences">
+        <h3>Difference between Old CSS & Current CSS</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>Old CSS</th>
+                    <th>Mordern CSS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Layout</th>
+                    <td>Float, Table</td>
+                    <td>Flexbox, Grid</td>
+                </tr>
+                <tr>
+                    <th>Responsiveness</th>
+                    <td>No</td>
+                    <td>Media + Container Queries</td>
+                </tr>
+                <tr>
+                    <th>Reuseability</th>
+                    <td>No</td>
+                    <td>CSS Variables</td>
+                </tr>
+                <tr>
+                    <th>Animations</th>
+                    <td>No</td>
+                    <td>Native animations</td>
+                </tr>
+                <tr>
+                    <th>Browser support</th>
+                    <td>Inconsistent</td>
+                    <td>Standardized</td>
+                </tr>
+                <tr>
+                    <th>Maintainability</th>
+                    <td>Hard</td>
+                    <td>Easy Scalable</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>
