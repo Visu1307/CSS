@@ -11,9 +11,16 @@
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, 'Arial Narrow', Arial, sans-serif;
         }
 
-            html{
-                font-size: 20px;
-            }
+        html{
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, 'Arial Narrow', Arial, sans-serif, Courier, monospace;
+            background-color: aqua;
+        }
+
+        h1{
+            background-color: turquoise;
+            text-align: center;
+        }
 
         .bg-img {
             width: 500px;
@@ -39,7 +46,9 @@
             background-repeat: no-repeat;
             background-position: center;
         }
-
+        .bd{
+            border: 2px solid black;
+        }
         li {
             margin-top: 10px;
         }
@@ -55,6 +64,7 @@
         <p>color : Property</p>
         <p>red : Value</p>
     </section>
+    <hr>
     <section id="selectors">
         <h1>Types of selectors</h1>
         <ol type="1">
@@ -62,7 +72,7 @@
             <h3>
                 <li>Element Selector : Extension used to save external CSS files is <b>.css</b></li>
             </h3>
-            <!-- </div> -->
+            <!-- </ div> -->
             <!-- <div id="d1"> -->
             <li id="d1">
                 ID Selector : <abbr title="Cascading Style Sheet">CSS</abbr> : It describes how the HTML elements
@@ -84,6 +94,7 @@
             <!-- </div> -->
         </ol>
     </section>
+    <hr>
     <section id="types">
         <h1>Types of stylesheets</h1>
         <ol>
@@ -101,14 +112,17 @@
             </li>
         </ol>
     </section>
+    <hr>
     <section id="comments">
         <h3>CSS comments can be written as /* */ for single and multi lines both are same.</h3>
     </section>
+    <hr>
     <section id="errors">
         <h3>CSS Errors may arise when you provide wrong propetry name or wrong values to correct properties.</h3>
         <h3>Colons, Braces errors may also encountered.</h3>
         <h3>Tips : Use code editor, check styling frequently</h3>
     </section>
+    <hr>
     <section id="colors">
         <h1>Types of colors</h1>
         <ol>
@@ -126,6 +140,7 @@
                     <sup><small>o</small></sup>, SATURATION : 50%, LIGHTNESS : 20%, ALPHA (OPACITY) : 0.8</b></li>
         </ol>
     </section>
+    <hr>
     <section id="bg-props">
         <h1>Background properties</h1>
         <ol>
@@ -156,6 +171,7 @@
             </li>
         </ol>
     </section>
+    <hr>
     <section id="borders">
         <h1>Borders</h1>
         <div style="border: 2px solid black; margin-top: 10px; color:unset">Border 2px Solid Black</div>
@@ -168,6 +184,7 @@
         <div style="border: 5px solid; border-color: black; border-radius: 20px; height: 100px; margin-top: 10px;">
             Rounded Corners Using Border Radius 20px</div>
     </section>
+    <hr>
     <section id="margin">
         <h1>Margins</h1>
         <div style="margin: 40px; border: 2px solid black; height: 50px; width: 200px;">Full Margin 20px</div>
@@ -180,6 +197,7 @@
         <div style="margin: 10px 20px 30px 40px; border: 2px solid black; height: 50px; width: 200px;">Top 10px, Right
             20px, Bottom 30px, Left 40px</div>
     </section>
+    <hr>
     <section id="padding">
         <h1>Padding</h1>
         <div style="padding: 50px; border: 2px solid black; margin-top: 20px;">This content is 50px fully padded. <br>
@@ -198,6 +216,7 @@
         <div style="padding : 40px 50px 60px 70px;  border: 2px solid black; margin-top: 20px;">This content is top
             40px, right 50px, bottom 60px, and left 70px padded.</div>
     </section>
+    <hr>
     <section id="height">
         <h1>Height</h1>
         <div style="height: 10px; border: 2px solid black;">This div has height of 10px</div>
@@ -209,6 +228,7 @@
         <div style="max-height: 100px; height: 150px; border: 2px solid black;">This div has max-height of 100px given
             150px prevents bigger than 100px.</div>
     </section>
+    <hr>
     <section id="width">
         <h1>Width</h1>
         <div style="width: 100px; border: 2px solid black;">This div has width of 100px</div>
@@ -220,6 +240,7 @@
         <div style="max-width: 200px; width: 250px; border: 2px solid black;">This div has max-width of 200px given
             250px prevents bigger than 200px.</div>
     </section>
+    <hr>
     <section id="em_demo">
         <div style="font-size: 10px;">
             It has font-size : 10px
@@ -231,6 +252,7 @@
             </div>
         </div>
     </section>
+    <hr>
     <section id="rem_demo">
         <div style="font-size: 2rem;">
             This is 32px equivalent font
@@ -240,6 +262,71 @@
             This is orignal 32px font
         </div>
     </section>
+    <hr>
+    <section id="box">
+        <h1>Box Model</h1>
+        <div style="height: 200px; width: 200px; border: 10px solid black; margin: 60px; padding: 50px;">
+            <h3>Calculation for CSS Box Model</h3>
+        </div>
+        <p>Given width = 200px, height = 200px, border = 10px, margin = 60px, padding = 50px</p>
+        <ul>
+            <li>Total Width = Width (200px) + Left Padding (50px) + Right Padding (50px) + Left Border (10px) + Right Border (10px) = 320px</li>
+            <li>Total Height = Height (200px) + Top Padding (50px) + Bottom Padding (50px) + Top Border (10px) + Bottom Border (10px) = 320px</li>
+            <li>Total Size = 320x320</li>
+        </ul>
+    </section>
+    <hr>
+    <section id="outline">
+        <h1>Outline</h1>
+        <div style="display: flex; gap: 10px;">
+            <div style="outline-style: solid; outline-color: #ff0000; margin: 200px; outline-width: 25px; outline-offset: 100px;  height: 200px; width: 200px;">
+                It is outline. Not counted in box model.
+            </div>
+            <div style="outline-style: dotted; outline-color: #ff0000; border: 20px solid blue; margin: 200px; outline-width: 25px;  height: 200px; width: 200px;">
+                Difference between border (blue) and outline (red).
+            </div>
+        </div>
+        <ul>
+            <li>outline-style : Dotted, Dashed, Groove, Ridge, Solid.</li>
+            <li>outline-color : All Colors Supported.</li>
+            <li>outline-width : Thickness of the borders.</li>
+            <li>outline-offset : Padding of the outlined box.</li>
+        </ul>
+    </section>
+    <hr>
+    <section id="text">
+        <h1>Text</h1>
+        <ul>
+            <li>color : <span style="color: #ff0000;">Color of this text has been changed to red.</span></li>
+            <li>alignment : <span>You can align text wherever you want like : </span></li>
+            <p class="bd" style="text-align: start;">Text-START</p>
+            <p class="bd" style="text-align: center;">Text-CENTER</p>
+            <p class="bd" style="text-align: end;">Text-END</p>
+            <p class="bd" style="text-align-last: right;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur dolorum doloremque culpa quod cupiditate, quis nobis necessitatibus, asperiores optio, consectetur officia nisi ab repudiandae accusantium consequatur tempora iusto nostrum quasi eius? Maiores omnis dolor minima doloremque earum perferendis, sint fugit aliquid fuga obcaecati quis amet exercitationem consectetur ipsum ducimus quas provident beatae? Quod quibusdam quae nihil porro fugit distinctio dolor, placeat quasi culpa earum, unde, tenetur fuga dolore modi praesentium eaque id eum provident. Aliquam rerum ducimus corporis perferendis id, accusamus ullam laboriosam similique illum quae fuga illo explicabo laudantium eius quia velit repellat omnis fugiat inventore magni TEXT_ALIGN_LAST=RIGHT</p>
+            <li>vertical-align : top, middle, bottom etc.</li>
+            <p class="bd"  style="vertical-align: middle;  height: 50px;">VERITCAL-ALIGN=MIDDLE</p>
+            <li>direction : rtl (default ltr)</li>
+            <p class="bd" style="direction: rtl;"> This is Right To Left Text using DIRECTION</p>
+            <li>text-decoration : You can decorate your text with different properties like : text-decoration-line, text-decoration-style, text-decoration-color</li>
+            <p style="text-decoration: line-through;">TEXT_DECORATION=LINE_THROUGH</p>
+            <p style="text-decoration: underline;">TEXT_DECORATION=UNDERLINE</p>
+            <p style="text-decoration: overline;">TEXT_DECORATION=OVERLINE</p>
+            <p style="text-decoration: overline underline; text-decoration-color: red;">TEXT_DECORATION=OVERLINE_AND_UNDERLINE</p>
+            <p style="text-decoration: underline wavy red;">WAVY DECOARAITON</p>
+            <li>text-transform : lower,upper,capitalize</li>
+            <p style="text-transform: lowercase;">ALL COMES IN LOWER CASE</p>
+            <p style="text-transform: uppercase;">all comes in upper case</p>
+            <p style="text-transform: capitalize;">all comes in first letter capitalize</p>
+            <li>Text Spacing : Different ways to keep text spacing are as follows : </li>
+            <p class="bd" style="text-indent: 10%;"><mark>Text indentation of 10%</mark> consectetur, adipisicing elit. Placeat praesentium cupiditate qui facere eius minus accusantium sed assumenda officia saepe? Ea blanditiis debitis earum repellendus officia, totam aliquam molestiae iste voluptatibus quod eligendi quaerat dignissimos amet nesciunt accusamus quidem quam libero illum non similique dolorem sit voluptate. Fugiat, veritatis explicabo.</p>
+            <p class="bd" style="letter-spacing: 10px;">This fonts has 10px of letter spacing</p>
+            <p class="bd" style="word-spacing: 10px;">This fonts has 10px of word spacing</p>
+            <p class="bd" style="line-height: 2;"><mark>Line height of 2 given</mark> elit. Quae totam ducimus error odio aperiam! Neque aspernatur reiciendis autem, quam doloremque nesciunt doloribus repellat magnam facere. Sequi quaerat, perferendis ipsam doloribus necessitatibus possimus fuga veniam sint delectus reiciendis voluptatem! Iste, distinctio perspiciatis. Facere beatae veniam totam deserunt ab officiis excepturi corrupti.</p>
+            <li>Text shadow : You can provide shadow effects to text like : </li>
+            <h2 style="text-shadow: 5px 5px red;">HELLO WORLD</h2>
+        </ul>
+    </section>
+    <hr>
 </body>
 
 </html>

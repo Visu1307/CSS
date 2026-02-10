@@ -2,20 +2,25 @@
 
 <head>
 	<title>CSS Demo</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
 	<style>
 		* {
 			margin: 0;
+			font-family: Google Sans;
 		}
 
 		nav {
 			font-size: large;
 			color: white;
 			font-weight: bolder;
-			background-color: rgba(0, 0, 0, 0.8);
+			background-color: rgba(0, 0, 0, 0.6);
 			ul {
 				display: flex;
 				gap: 25px;
-				padding: 25px;
+				padding: 15px;
+				font-size: larger;
 			}
 		}
 		li{
@@ -28,10 +33,12 @@
 		}
 
 		aside {
-			height: 100vh;
+			height: calc(100vh - 105px);
 			width: 15%;
+			font-size: larger;
 			background-color: rgba(128, 128, 128, 0.486);
 			padding: 10px;
+			overflow-y: scroll;
 		}
 
 		.innerDiv {
@@ -67,6 +74,7 @@
 			<li>SQL</li>
 			<li>Python</li>
 			<li>Java</li>
+			<li><input type="color" oninput="document.body.style.backgroundColor = document.getElementById('mainColor').value" id="mainColor" value="#ffffff" width="1	50px"></li>
 		</ul>
 	</nav>
 	<aside>
@@ -83,10 +91,8 @@
 		</div>
 		<div class="d-flex">
 			<div class="innerDiv" style="margin : 10px 0 0 10px">
-				<img width="25" height="25"
-					src="https://img.icons8.com/external-icongeek26-outline-icongeek26/64/external-play-essentials-icongeek26-outline-icongeek26.png"
-					alt="external-play-essentials-icongeek26-outline-icongeek26" />
-					<a href="css_theory.html">CSS Introduction</a>
+				<img width="25" height="25" src="https://img.icons8.com/external-solidglyph-m-oki-orlando/32/external-Start-basic-ui-solidglyph-m-oki-orlando.png" alt="external-Start-basic-ui-solidglyph-m-oki-orlando"/>
+				<a href="css_theory.html">CSS Introduction</a>
 			</div>
 			<div class="d-flex">
 				<div class="innerDiv"><img width="25" height="25" src="https://img.icons8.com/ios/50/curly-brackets.png"
@@ -111,7 +117,7 @@
 			</div>
 			<div class="d-flex items">
 				<div class="innerDiv">
-					<img width="25" height="25" src="https://img.icons8.com/ios/50/how-quest--v2.png" alt="how-quest--v2" />
+					<img width="25" height="25" src="https://img.icons8.com/ios/50/sheets.png" alt="sheets"/>
 				CSS Stylesheets
 				<img width="25" height="25" src="https://img.icons8.com/windows/32/long-arrow-down.png"
 						class="down-arrow" alt="long-arrow-down" />
@@ -177,9 +183,7 @@
 			</div>
 			<div class="d-flex items">
 				<div class="innerDiv">
-					<img width="24" height="24"
-						src="https://img.icons8.com/external-tal-revivo-filled-tal-revivo/24/external-inside-borders-worksheet-highlight-cell-section-button-table-filled-tal-revivo.png"
-						alt="external-inside-borders-worksheet-highlight-cell-section-button-table-filled-tal-revivo" />
+					<img width="25" height="25" src="https://img.icons8.com/ios-filled/50/border-horizontal.png" alt="border-horizontal"/>
 					CSS Borders
 					<img width="25" height="25" src="https://img.icons8.com/windows/32/long-arrow-down.png"
 						class="down-arrow" alt="long-arrow-down" />
@@ -225,6 +229,47 @@
 					<li><a href="css_demo.html#width">Max. Width</a></li>
 				</ul>
 			</div>
+			<div class="d-flex">
+				<div class="innerDiv">
+					<img width="24" height="24"
+						src="https://img.icons8.com/external-tal-revivo-filled-tal-revivo/24/external-inside-borders-worksheet-highlight-cell-section-button-table-filled-tal-revivo.png"
+						alt="external-inside-borders-worksheet-highlight-cell-section-button-table-filled-tal-revivo" />
+					<a href="css_demo.html#box">CSS Box Model</a>
+				</div>
+			</div>
+			<div class="d-flex items">
+				<div class="innerDiv">
+					<img width="25" height="25" src="https://img.icons8.com/ios/50/ios-application-placeholder.png" alt="ios-application-placeholder"/>
+					CSS Outline
+					<img width="25" height="25" src="https://img.icons8.com/windows/32/long-arrow-down.png"
+						class="down-arrow" alt="long-arrow-down" />
+					<img width="24" height="24" src="https://img.icons8.com/material-rounded/24/long-arrow-right.png"
+						class="right-arrow" alt="long-arrow-right" />
+				</div>
+				<ul type="none" class="drop-down">
+					<li><a href="css_demo.html#outline">outline-style</a></li>
+            		<li><a href="css_demo.html#outline">outline-color</a></li>
+            		<li><a href="css_demo.html#outline">outline-width</a></li>
+            		<li><a href="css_demo.html#outline">outline-offset</a></li>
+				</ul>
+			</div>
+			<div class="d-flex items">
+				<div class="innerDiv">
+					<img width="25" height="25" src="https://img.icons8.com/ios/50/text.png" alt="text"/>
+					CSS Text
+					<img width="25" height="25" src="https://img.icons8.com/windows/32/long-arrow-down.png"
+						class="down-arrow" alt="long-arrow-down" />
+					<img width="24" height="24" src="https://img.icons8.com/material-rounded/24/long-arrow-right.png"
+						class="right-arrow" alt="long-arrow-right" />
+				</div>
+				<ul type="none" class="drop-down">
+					<li><a href="css_demo.html#text">Text Color</a></li>
+            		<li><a href="css_demo.html#text">Text Alignment</a></li>
+            		<li><a href="css_demo.html#text">Text Decoration</a></li>
+            		<li><a href="css_demo.html#text">Text Transformation</a></li>
+            		<li><a href="css_demo.html#text">Text Text Shadow</a></li>
+				</ul>
+			</div>
 	</aside>
 </body>
 <script>
@@ -247,5 +292,10 @@
 			}
 		})
 	})
+
+	// function changeBG() {
+	// 	const color = document.getElementById("mainColor").value;
+	// 	document.body.style.backgroundColor = document.getElementById("mainColor").value;
+	// }
 </script>
 </html>
