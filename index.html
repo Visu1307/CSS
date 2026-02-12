@@ -3,8 +3,8 @@
 <head>
 	<title>CSS Demo</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
 	<style>
 		* {
 			margin: 0;
@@ -26,7 +26,9 @@
 		li{
 			margin-top: 5px;
 		}
-
+		nav a{
+			color: white;
+		}
 		a {
 			color: black;
 			text-decoration: none;
@@ -54,6 +56,11 @@
 			gap: 10px;
 			margin : 10px 0 0 10px;
 		}
+		.innerDiv:hover, .d-flex li:hover{
+			border-radius: 10px;
+			padding: 5px;
+			background-color: azure;
+		}
 		.right-arrow{
 			display: none;
 		}
@@ -68,13 +75,13 @@
 <body>
 	<nav>
 		<ul type="none">
-			<li>HTML</li>
+			<li><a href="../HTML/index.html">HTML</a></li>
 			<li>CSS</li>
 			<li>Javascript</li>
 			<li>SQL</li>
 			<li>Python</li>
 			<li>Java</li>
-			<li><input type="color" oninput="document.body.style.backgroundColor = document.getElementById('mainColor').value" id="mainColor" value="#ffffff" width="1	50px"></li>
+			<li><input type="color" oninput="document.body.style.backgroundColor = document.getElementById('mainColor').value" id="mainColor" value="#ffffff" width="150px"></li>
 		</ul>
 	</nav>
 	<aside>
@@ -175,10 +182,9 @@
 						class="right-arrow" alt="long-arrow-right" />
 				</div>
 				<ul type="none" class="drop-down">
-					<li><a href="css_demo.html#bg-props">default</a></li>
-					<li><a href="css_demo.html#bg-props">repeat-x</a></li>
-					<li><a href="css_demo.html#bg-props">repeat-y</a></li>
-					<li><a href="css_demo.html#bg-props">no-repeat</a></li>
+					<li><a href="css_demo.html#bg-props">background-color</a></li>
+					<li><a href="css_demo.html#bg-props">background-image</a></li>
+					<li><a href="css_demo.html#bg-props">background-attachment</a></li>
 				</ul>
 			</div>
 			<div class="d-flex items">
@@ -267,7 +273,25 @@
             		<li><a href="css_demo.html#text">Text Alignment</a></li>
             		<li><a href="css_demo.html#text">Text Decoration</a></li>
             		<li><a href="css_demo.html#text">Text Transformation</a></li>
+            		<li><a href="css_demo.html#text">Text Wrapping</a></li>
             		<li><a href="css_demo.html#text">Text Text Shadow</a></li>
+				</ul>
+			</div>
+			<div class="d-flex items">
+				<div class="innerDiv">
+					<img width="25" height="25" src="https://img.icons8.com/color/48/fonts-app.png" alt="fonts-app"/>
+					CSS Fonts
+					<img width="25" height="25" src="https://img.icons8.com/windows/32/long-arrow-down.png"
+						class="down-arrow" alt="long-arrow-down" />
+					<img width="24" height="24" src="https://img.icons8.com/material-rounded/24/long-arrow-right.png"
+						class="right-arrow" alt="long-arrow-right" />
+				</div>
+				<ul type="none" class="drop-down">
+					<li><a href="css_demo.html#fonts">Font Family</a></li>
+            		<li><a href="css_demo.html#fonts">Font Style</a></li>
+            		<li><a href="css_demo.html#fonts">Font Size</a></li>
+            		<li><a href="css_demo.html#fonts">Font Pairings</a></li>
+            		<li><a href="css_demo.html#fonts">Font Shorthand Property</a></li>
 				</ul>
 			</div>
 	</aside>
