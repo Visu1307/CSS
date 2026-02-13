@@ -6,57 +6,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Demo</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0121aea965.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <style>
-        html{
+        html {
             font-size: 20px;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, 'Arial Narrow', Arial, sans-serif, Courier, monospace;
-            background-color: rosybrown
+            background-color: beige;
         }
-        #internal {
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, 'Arial Narrow', Arial, sans-serif;
+        mark {
+            color: white;
+            background-color: sienna;
         }
-        h1{
+        h1 {
             background-color: sienna;
             color: white;
             text-align: center;
         }
-
         .bg-img {
             width: 500px;
             height: 500px;
             background: url("img/small.jpg") no-repeat;
             border: 2px solid black;
         }
-
         .bg-img-repX {
             background-repeat: repeat-x;
         }
-
         .bg-img-repY {
             background-repeat: repeat-y;
         }
-
         .bg-img-no-rep {
             background-repeat: no-repeat;
             background-size: 100%;
         }
-
         .bg-img-no-rep-pos {
             background-repeat: no-repeat;
             background-position: center;
         }
-        .bd{
+        .bd {
             border: 2px solid black;
+        }
+        .inline {
+            display: inline-block;
+            vertical-align: middle;
+            height: 50%;
+            width: 50%;
         }
         li {
             margin-top: 10px;
+        }
+        #internal {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, 'Arial Narrow', Arial, sans-serif;
+        }
+        #fixedBtn{
+            background-color: brown; 
+            width: 100px; 
+            padding: 10px; 
+            position: fixed; 
+            bottom: 30px; 
+            right: 30px;
+        }
+        #firstCap::first-letter {
+            text-transform: capitalize;
         }
     </style>
 </head>
 
 <body>
-    <button style="background-color: wheat; width: 100px; padding: 10px; position: fixed; bottom: 30px; right: 30px;">
-        <a href="index.html" style="color: black; text-decoration: none; z-index: 1;">HOME</a>
+    <button id="fixedBtn">
+        <a href="index.html" style="color: bisque; text-decoration: none; z-index: 1; font-size: large; font-weight: bold;">HOME</a>
     </button>
     </div>
     <section id="syntax">
@@ -92,7 +110,8 @@
                 <li>Universal Selector : Font Family Provided.</li>
             </h3>
             <h3>
-                <li>Grouping Selector : You can apply same to all the type of selectors just by comma seprated selectors.</li>
+                <li>Grouping Selector : You can apply same to all the type of selectors just by comma seprated
+                    selectors.</li>
             </h3>
             <!-- </div> -->
         </ol>
@@ -251,8 +270,10 @@
         </div>
         <p>Given width = 200px, height = 200px, border = 10px, margin = 60px, padding = 50px</p>
         <ul>
-            <li>Total Width = Width (200px) + Left Padding (50px) + Right Padding (50px) + Left Border (10px) + Right Border (10px) = 320px</li>
-            <li>Total Height = Height (200px) + Top Padding (50px) + Bottom Padding (50px) + Top Border (10px) + Bottom Border (10px) = 320px</li>
+            <li>Total Width = Width (200px) + Left Padding (50px) + Right Padding (50px) + Left Border (10px) + Right
+                Border (10px) = 320px</li>
+            <li>Total Height = Height (200px) + Top Padding (50px) + Bottom Padding (50px) + Top Border (10px) + Bottom
+                Border (10px) = 320px</li>
             <li>Total Size = 320x320</li>
         </ul>
     </section>
@@ -260,16 +281,20 @@
     <section id="outline">
         <h1>Outline</h1>
         <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-            <div style="outline-style: solid; outline-color: #ff0000; margin: 200px; outline-width: 25px; outline-offset: 100px;  height: 200px; width: 200px;">
+            <div
+                style="outline-style: solid; outline-color: #ff0000; margin: 200px; outline-width: 25px; outline-offset: 100px;  height: 200px; width: 200px;">
                 It is outline. Not counted in box model.
             </div>
-            <div style="outline-style: groove; outline-color: #ff0000; margin: 200px; outline-width: 25px; outline-offset: 100px;  height: 200px; width: 200px;">
+            <div
+                style="outline-style: groove; outline-color: #ff0000; margin: 200px; outline-width: 25px; outline-offset: 100px;  height: 200px; width: 200px;">
                 It is Groove outline. Not counted in box model.
             </div>
-            <div style="outline-style: ridge; outline-color: #ff0000; margin: 200px; outline-width: 25px; outline-offset: 100px;  height: 200px; width: 200px;">
+            <div
+                style="outline-style: ridge; outline-color: #ff0000; margin: 200px; outline-width: 25px; outline-offset: 100px;  height: 200px; width: 200px;">
                 It is Ridge outline. Not counted in box model.
             </div>
-            <div style="outline-style: dotted; outline-color: #ff0000; border: 20px solid blue; margin: 200px; outline-width: 25px;  height: 200px; width: 200px;">
+            <div
+                style="outline-style: dotted; outline-color: #ff0000; border: 20px solid blue; margin: 200px; outline-width: 25px;  height: 200px; width: 200px;">
                 Difference between border (blue) and outline (red).
             </div>
         </div>
@@ -289,34 +314,70 @@
             <p class="bd" style="text-align: start;">Text-START</p>
             <p class="bd" style="text-align: center;">Text-CENTER</p>
             <p class="bd" style="text-align: end;">Text-END</p>
-            <p class="bd" style="text-align-last: right;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur dolorum doloremque culpa quod cupiditate, quis nobis necessitatibus, asperiores optio, consectetur officia nisi ab repudiandae accusantium consequatur tempora iusto nostrum quasi eius? Maiores omnis dolor minima doloremque earum perferendis, sint fugit aliquid fuga obcaecati quis amet exercitationem consectetur ipsum ducimus quas provident beatae? Quod quibusdam quae nihil porro fugit distinctio dolor, placeat quasi culpa earum, unde, tenetur fuga dolore modi praesentium eaque id eum provident. Aliquam rerum ducimus corporis perferendis id, accusamus ullam laboriosam similique illum quae fuga illo explicabo laudantium eius quia velit repellat omnis fugiat inventore magni TEXT_ALIGN_LAST=RIGHT</p>
+            <p class="bd" style="text-align-last: right;">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Tenetur dolorum doloremque culpa quod cupiditate, quis nobis necessitatibus, asperiores optio,
+                consectetur officia nisi ab repudiandae accusantium consequatur tempora iusto nostrum quasi eius?
+                Maiores omnis dolor minima doloremque earum perferendis, sint fugit aliquid fuga obcaecati quis amet
+                exercitationem consectetur ipsum ducimus quas provident beatae? Quod quibusdam quae nihil porro fugit
+                distinctio dolor, placeat quasi culpa earum, unde, tenetur fuga dolore modi praesentium eaque id eum
+                provident. Aliquam rerum ducimus corporis perferendis id, accusamus ullam laboriosam similique illum
+                quae fuga illo explicabo laudantium eius quia velit repellat omnis fugiat inventore magni
+                <mark>TEXT_ALIGN_LAST=RIGHT</mark>
+            </p>
             <li>vertical-align : top, middle, bottom etc.</li>
-            <p class="bd"  style="vertical-align: middle;  height: 50px;">VERITCAL-ALIGN=MIDDLE</p>
+            <table border="1">
+                <tr>
+                    <td style="height: 150px; vertical-align: bottom;">VALIGN=BOTTOM</td>
+                </tr>
+            </table>
             <li>direction : rtl (default ltr)</li>
             <p class="bd" style="direction: rtl;"> This is Right To Left Text using DIRECTION</p>
-            <li>text-decoration : You can decorate your text with different properties like : text-decoration-line, text-decoration-style, text-decoration-color</li>
+            <li>text-decoration : You can decorate your text with different properties like : text-decoration-line,
+                text-decoration-style, text-decoration-color</li>
             <p style="text-decoration: line-through;">TEXT_DECORATION=LINE_THROUGH</p>
             <p style="text-decoration: underline;">TEXT_DECORATION=UNDERLINE</p>
             <p style="text-decoration: overline;">TEXT_DECORATION=OVERLINE</p>
-            <p style="text-decoration: overline underline; text-decoration-color: red;">TEXT_DECORATION=OVERLINE_AND_UNDERLINE</p>
+            <p style="text-decoration: overline underline; text-decoration-color: red;">
+                TEXT_DECORATION=OVERLINE_AND_UNDERLINE</p>
             <p style="text-decoration: overline underline wavy red;">WAVY DECOARAITON</p>
             <li>text-transform : lower,upper,capitalize</li>
             <p style="text-transform: lowercase;">ALL COMES IN LOWER CASE</p>
             <p style="text-transform: uppercase;">all comes in upper case</p>
             <p style="text-transform: capitalize;">all comes in first letter capitalize</p>
+            <p id="firstCap">only first letter should be capitalized.</p>
             <li>Text Spacing : Different ways to keep text spacing are as follows : </li>
-            <p class="bd" style="text-indent: 10%;"><mark>Text indentation of 10%</mark> consectetur, adipisicing elit. Placeat praesentium cupiditate qui facere eius minus accusantium sed assumenda officia saepe? Ea blanditiis debitis earum repellendus officia, totam aliquam molestiae iste voluptatibus quod eligendi quaerat dignissimos amet nesciunt accusamus quidem quam libero illum non similique dolorem sit voluptate. Fugiat, veritatis explicabo.</p>
+            <p class="bd" style="text-indent: 10%;"><mark>Text indentation of 10%</mark> consectetur, adipisicing elit.
+                Placeat praesentium cupiditate qui facere eius minus accusantium sed assumenda officia saepe? Ea
+                blanditiis debitis earum repellendus officia, totam aliquam molestiae iste voluptatibus quod eligendi
+                quaerat dignissimos amet nesciunt accusamus quidem quam libero illum non similique dolorem sit
+                voluptate. Fugiat, veritatis explicabo.</p>
             <p class="bd" style="letter-spacing: 10px;">This fonts has 10px of letter spacing</p>
             <p class="bd" style="word-spacing: 10px;">This fonts has 10px of word spacing</p>
-            <p class="bd" style="line-height: 2;"><mark>Line height of 2 given</mark> elit. Quae totam ducimus error odio aperiam! Neque aspernatur reiciendis autem, quam doloremque nesciunt doloribus repellat magnam facere. Sequi quaerat, perferendis ipsam doloribus necessitatibus possimus fuga veniam sint delectus reiciendis voluptatem! Iste, distinctio perspiciatis. Facere beatae veniam totam deserunt ab officiis excepturi corrupti.</p>
+            <p class="bd" style="line-height: 2;"><mark>Line height of 2 given</mark> elit. Quae totam ducimus error
+                odio aperiam! Neque aspernatur reiciendis autem, quam doloremque nesciunt doloribus repellat magnam
+                facere. Sequi quaerat, perferendis ipsam doloribus necessitatibus possimus fuga veniam sint delectus
+                reiciendis voluptatem! Iste, distinctio perspiciatis. Facere beatae veniam totam deserunt ab officiis
+                excepturi corrupti.</p>
             <li>Text wrapping : </li>
-            <p class="bd" style="text-wrap: wrap;"> <mark> TEXT WRAP </mark> dolor sit amet consectetur adipisicing elit. Adipisci soluta voluptatibus quas, excepturi enim inventore alias cumque, repellendus repudiandae exercitationem blanditiis velit veniam? Nostrum laudantium quos temporibus voluptates, voluptas atque!</p>
+            <p class="bd" style="text-wrap: wrap;"> <mark> TEXT WRAP </mark> dolor sit amet consectetur adipisicing
+                elit. Adipisci soluta voluptatibus quas, excepturi enim inventore alias cumque, repellendus repudiandae
+                exercitationem blanditiis velit veniam? Nostrum laudantium quos temporibus voluptates, voluptas atque!
+            </p>
             <li>Text no wrapping : </li>
-            <p class="bd" style="text-wrap: nowrap;"> <mark> TEXT NO WRAP </mark> dolor sit amet consectetur adipisicing elit. Adipisci soluta voluptatibus quas, excepturi enim inventore alias cumque, repellendus repudiandae exercitationem blanditiis velit veniam? Nostrum laudantium quos temporibus voluptates, voluptas atque!</p>
+            <p class="bd" style="text-wrap: nowrap;"> <mark> TEXT NO WRAP </mark> dolor sit amet consectetur adipisicing
+                elit. Adipisci soluta voluptatibus quas, excepturi enim inventore alias cumque, repellendus repudiandae
+                exercitationem blanditiis velit veniam? Nostrum laudantium quos temporibus voluptates, voluptas atque!
+            </p>
             <li>Text wrapping pretty : </li>
-            <p class="bd" style="text-wrap: pretty;"> <mark> TEXT PRETTY WRAP </mark> dolor sit amet consectetur adipisicing elit. Adipisci soluta voluptatibus quas, excepturi enim inventore alias cumque, repellendus repudiandae exercitationem blanditiis velit veniam? Nostrum laudantium quos temporibus voluptates, voluptas atque!</p>
+            <p class="bd" style="text-wrap: pretty;"> <mark> TEXT PRETTY WRAP </mark> dolor sit amet consectetur
+                adipisicing elit. Adipisci soluta voluptatibus quas, excepturi enim inventore alias cumque, repellendus
+                repudiandae exercitationem blanditiis velit veniam? Nostrum laudantium quos temporibus voluptates,
+                voluptas atque!</p>
             <li>Text wrapping balance : </li>
-            <p class="bd" style="text-wrap: balance;"> <mark> TEXT BALANCE WRAP </mark> dolor sit amet consectetur adipisicing elit. Adipisci soluta voluptatibus quas, excepturi enim inventore alias cumque, repellendus repudiandae exercitationem blanditiis velit veniam? Nostrum laudantium quos temporibus voluptates, voluptas atque!</p>
+            <p class="bd" style="text-wrap: balance;"> <mark> TEXT BALANCE WRAP </mark> dolor sit amet consectetur
+                adipisicing elit. Adipisci soluta voluptatibus quas, excepturi enim inventore alias cumque, repellendus
+                repudiandae exercitationem blanditiis velit veniam? Nostrum laudantium quos temporibus voluptates,
+                voluptas atque!</p>
             <li>Text shadow : You can provide shadow effects to text like : </li>
             <h2 style="text-shadow: 5px 5px red;">HELLO WORLD</h2>
         </ul>
@@ -351,9 +412,65 @@
             This is orignal 32px font
         </div>
         <p style="font-family: 'Helvetica','Garmond';">This shows text-pairing among Helvetica and Garamond.</p>
-        <p style="font: italic 20px courier new;">This shows shorthand property for font using italic style of 20px and courier new fonts.</p>
+        <p style="font: italic 20px courier new;">This shows shorthand property for font using italic style of 20px and
+            courier new fonts.</p>
     </section>
-    <hr>    
+    <hr>
+    <section id="icons">
+        <h1>Icons</h1>
+        <p>Font awesome icons are used and displayed using classes like : </p>
+        <i class="fas fa-cloud"></i>
+        <i class="fas fa-heart"></i>
+        <i class="fas fa-car"></i>
+        <i class="fas fa-file"></i>
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-save"></i>
+        <i class="fas fa-book"></i>
+        <vishwas class="fas fa-train"></vishwas>
+        <p>Bootstrap icons are used and displayed using class names like : </p>
+        <i class="bi bi-alarm"></i>
+        <i style="color: green;" class="bi bi-xbox"></i>
+        <i style="font-size: 2rem; color: blue;" class="bi bi-playstation"></i>
+        <i class="bi bi-apple"></i>
+        <i class="bi bi-microsoft"></i>
+        <i class="bi bi-heart"></i>
+        <i class="bi bi-sun"></i>
+    </section>
+    <hr>
+    <section id="links">
+        <h1>Links</h1>
+        <a href="https://www.google.com" id="visit" target="_blank">Visit this link to change its color.</a>
+        <ul>
+            <li>:link - Normal unvisited link.</li>
+            <li>:visited - Visited link by user.</li>
+            <li>:hover - It shows effects when we hover over the element.</li>
+            <li>:active - Link the moment when clicked.</li>
+        </ul>
+    </section>
+    <hr>
+    <section id="lists">
+        <h1>Lists</h1>
+        <ul>
+            <li>List Style Types : lower-alpha, uppper-alpha, lower-roman, upper-roman, circle, square, decimal, decimal-leading-zero etc.</li>
+            <li>List Style Position : Inside or Outside.</li>
+            <ul style="list-style-type:  lower-alpha; list-style-position: outside;">
+                <li class="bd">Coffee</li>
+                <li class="bd">Tea</li>
+                <li class="bd">Bourn vita</li>
+            </ul>
+            <ul style="list-style-position: inside; list-style-type:  upper-alpha;">
+                <li class="bd">Coffee</li>
+                <li class="bd">Tea</li>
+                <li class="bd">Bourn vita</li>
+            </ul>
+            <li>List Style Image : You can provide images as list style type here.</li>
+            <ul style="list-style-image: url(https://img.icons8.com/pastel-glyph/25/list.png);">
+                <li>Hello</li>
+                <li>Hello</li>
+            </ul>
+        </ul>
+    </section>
+    <hr>
 </body>
 
 </html>

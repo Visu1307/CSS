@@ -15,3 +15,8 @@ div{
 #external{
     font-family: cursive;
 }
+
+#visit:link { color: blue; }
+#visit:visited { color: black; }
+#visit:hover { color: red; }
+#visit:active { color: green; }
