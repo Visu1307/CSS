@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+		rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+            background-color: beige;
+            font-family: Google Sans;
+        }
+        h1{
+            background-color: sienna;
+            color: beige;
+            text-align: center;
+            font-size: 3rem;
+        }
+        mark{
+            background-color: sienna;
+            color: beige;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Display</h1>
+    <ul>
+        <section id="block">
+            <li><mark>display : block</mark> - It takes content height and full width.</li>
+            <div class="bd" style="display: block;">
+                <p>If content's height keeps increasing then height of block parent will also be increasing.</p>
+            </div>
+            Examples of block level elements : 
+            <pre>
+                &lt;div&gt;
+                &lt;h1&gt; - &lt;h6&gt;
+                &lt;p&gt;
+                &lt;form&gt;
+                &lt;header&gt;
+                &lt;footer&gt;
+                &lt;section&gt;
+            </pre>
+        </section>
+        <section id="inline">
+            <li><mark>display : inline</mark> - It occupies only required height and width.</li>
+            <div class="bd" style="display: inline; height: 100px;">
+                <span>You can easily change the default behaviour of any element like this is an div but display is inline it occupies only required height and width not full.</span>
+            </div>
+            <p>Height and width properties will won't work in inline display style.</p>
+            <p>Examples of inline level elements : </p>
+            <pre>
+                &lt;a&gt;
+                &lt;span&gt;
+                &lt;img&gt;
+            </pre>
+        </section>
+        <section id="inblock">
+            <li><mark>display : inline-block</mark> : It allows you to use inline abilites while allowing height and width properties.</li>
+            <div class="bd" style="display: inline-block; height: 50px; width: 50%;">
+                Hello World, How Are You? I am Fine!
+            </div>
+        </section>
+        <section id="none">
+            <li><mark> display : none</mark> - It does not show any element wrapped inside it and also doesn't occupies space on the display.</li>
+            <div style="display: none;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia repellendus aut tempora, alias, distinctio asperiores, voluptatibus quidem debitis quas quisquam amet soluta error modi rerum hic! Reprehenderit ea tempore ratione, consequuntur est deleniti perferendis enim nulla exercitationem quos adipisci dolorem atque illum aut cupiditate, rerum obcaecati repellendus eligendi quia. Minima alias architecto perferendis porro fugiat quis harum. Nulla culpa nihil voluptas veritatis ullam deserunt pariatur eum neque animi voluptates. Rerum omnis nihil aspernatur fuga quae in excepturi quia esse nostrum, ipsum ducimus magni? Sed eum, praesentium recusandae ex asperiores fugiat tenetur eveniet neque. Fuga libero nobis deleniti sapiente facere repellendus?
+            </div>
+        </section>
+        <section id="flex">
+            <li><mark>display : flex</mark> - It flexs your elements and allows you to align-items and justify-content values like </li>
+            <p>Default flex direction is row. You can change it using flex-direction propery.</p>
+            <div class="bd" style="display: flex; gap: 10px; padding: 20px;">
+                <div class="bd" style="height: 50%; width: 50%;">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius recusandae laboriosam, qui quo distinctio suscipit sunt ex aliquid natus harum pariatur explicabo ab debitis magnam? Dolor, laudantium recusandae. Expedita, vel!
+                </div>
+                <div class="bd" style="height: 50%; width: 50%;">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium aspernatur incidunt eos ipsam eligendi temporibus distinctio, a vitae expedita nesciunt perspiciatis perferendis id voluptatibus sequi, consequatur cumque quas itaque nulla.
+                </div>
+            </div>
+            <div class="bd" style="display: flex; flex-direction: column; align-items: start; row-gap: 10px; gap: 10px; padding: 20px;">
+                <div class="bd" style="height: 50%; width: 50%;">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius recusandae laboriosam, qui quo distinctio suscipit sunt ex aliquid natus harum pariatur explicabo ab debitis magnam? Dolor, laudantium recusandae. Expedita, vel!
+                </div>
+                <div class="bd" style="height: 50%; width: 50%;">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium aspernatur incidunt eos ipsam eligendi temporibus distinctio, a vitae expedita nesciunt perspiciatis perferendis id voluptatibus sequi, consequatur cumque quas itaque nulla.
+                </div>
+            </div>
+            <p>
+                If <mark> flex-direction : row </mark> given then <mark> align-items works VERTICALLY </mark> and <mark>justify-content works HORIZANTALLY.</mark>
+            </p>
+            <p>
+                If <mark> flex-direction : column </mark> given then <mark> align-items works HORIZANTALLY </mark> and <mark>justify-content works VERTICALLY.</mark>
+            </p>
+            <p>gap can be used to put spacing between hortizantal elements.</p>
+            <p>row-gap can be used to put spacing between vertical elements.</p>
+        </section>
+        <section id="grid">
+            <li><mark>display : grid</mark> - It allows to create basic equal-width column values like : </li>
+            <p><mark>grid-template-columns</mark> : Allows you defining template for your columns like how many column will be there</p>
+            <div class="bd" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 10px;">
+                <div class="bd" style="background-color: red; height: 100%; width: 100%;">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam cupiditate, cumque tempore voluptates dolores sit sunt dolorum minus eaque laboriosam, tempora unde? Omnis minima officiis esse, vel laborum atque mollitia.
+                </div>
+                <div class="bd" style="background-color: green; height: 100%; width: 100%;">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, repellendus consequatur autem saepe architecto doloribus! Consectetur aspernatur, ut maiores dignissimos culpa repudiandae recusandae tempora, labore suscipit a quos impedit nostrum!
+                </div>
+                <div class="bd" style="background-color: blue; height: 100%; width: 100%;">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nemo excepturi ratione sit velit suscipit dolorum similique neque dolorem est nihil aliquam quisquam quos placeat accusantium, veniam a, molestias temporibus.
+                </div>
+                <div class="bd" style="background-color: yellow; height: 100%; width: 100%;">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nemo excepturi ratione sit velit suscipit dolorum similique neque dolorem est nihil aliquam quisquam quos placeat accusantium, veniam a, molestias temporibus.
+                </div>
+            </div>
+        </section>
+    </ul>
+</body>
+</html>

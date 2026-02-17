@@ -20,3 +20,31 @@ div{
 #visit:visited { color: black; }
 #visit:hover { color: red; }
 #visit:active { color: green; }
+
+table{
+    border-style: groove;
+    border-width: 2cap;
+    border-color: sienna;
+    border-spacing: 20px;
+    width: auto;
+    overflow: scroll;
+}
+
+.bd{
+    border: 2px solid black;
+}
+
+tr:nth-child(even){
+    background-color: rgba(165, 42, 42, 0.384);
+}
+
+th,td{
+    height: auto;
+    vertical-align: bottom;
+    text-align: center;
+    padding: 20px;
+}
+th,td:hover{
+    background-color: sienna;
+    color: beige;
+}
