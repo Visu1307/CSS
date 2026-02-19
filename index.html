@@ -16,10 +16,10 @@
 
 		nav {
 			font-size: large;
-			color: white;
+			color: beige;
 			font-weight: bolder;
-			background-color: rgba(0, 0, 0, 0.6);
-
+			background-color: sienna;
+			opacity: 0.6;
 			ul {
 				display: flex;
 				gap: 25px;
@@ -32,20 +32,16 @@
 			margin-top: 5px;
 		}
 
-		nav a {
-			color: white;
-		}
-
 		a {
-			color: black;
+			color: beige;
 			text-decoration: none;
 		}
-
 		aside {
 			height: calc(100vh - 105px);
 			width: 16%;
 			font-size: larger;
-			background-color: rgba(128, 128, 128, 0.486);
+			background-color: sienna;
+			color: beige;
 			padding: 10px;
 			overflow-y: scroll;
 		}
@@ -69,21 +65,21 @@
 				padding: 10px;
 			}
 		}
-
-		.innerDiv:hover,
-		.d-flex li:hover {
+		.innerDiv:hover{
+			background-color: rgba(245, 245, 220, 0.4);
 			border-radius: 10px;
-			background-color: azure;
 		}
-
 		.right-arrow {
 			display: none;
 		}
-
 		.drop-down {
 			display: none;
 			flex-direction: column;
 			gap: 0;
+			li:hover{
+				background-color: rgba(245, 245, 220, 0.4);
+				border-radius: 10px;
+			}
 		}
 	</style>
 </head>
@@ -97,45 +93,45 @@
 			<li>SQL</li>
 			<li>Python</li>
 			<li>Java</li>
-			<li><input type="color"
+			<!-- <li><input type="color"
 					oninput="document.body.style.backgroundColor = document.getElementById('mainColor').value"
-					id="mainColor" value="#ffffff" width="150px"></li>
+					id="mainColor" value="#ffffff" width="150px"></li> -->
 		</ul>
 	</nav>
 	<aside>
 		<div class="d-flex" style="font-size: larger;">
-			<div class="innerDiv"><img width="50" height="50" src="https://img.icons8.com/ios/50/css.png" alt="css" />
+			<div class="innerDiv"><img width="50" height="50" src="https://img.icons8.com/ios/50/ffffff/css.png" alt="css"/>
 				<h3>Tutorials</h3>
 			</div>
 		</div>
 		<div class="d-flex">
 			<div class="innerDiv">
-				<img width="25" height="25" src="https://img.icons8.com/ios/50/home--v1.png" alt="home--v1" />
+				<img src="https://img.icons8.com/ios/25/ffffff/home--v1.png" alt="home--v1" />
 				<a href="index.html">CSS Home</a>
 			</div>
 		</div>
 		<div class="d-flex">
 			<div class="innerDiv">
 				<img width="25" height="25"
-					src="https://img.icons8.com/external-solidglyph-m-oki-orlando/32/external-Start-basic-ui-solidglyph-m-oki-orlando.png"
+					src="https://img.icons8.com/external-solidglyph-m-oki-orlando/32/ffffff/external-Start-basic-ui-solidglyph-m-oki-orlando.png"
 					alt="external-Start-basic-ui-solidglyph-m-oki-orlando" />
 				<a href="css_theory.html">CSS Introduction</a>
 			</div>
 		</div>
-		<div class="d-flex">
-			<div class="innerDiv"><img width="25" height="25" src="https://img.icons8.com/ios/50/curly-brackets.png"
+		<div class="d-flex demo">
+			<div class="innerDiv"><img width="25" height="25" src="https://img.icons8.com/ios/50/ffffff/curly-brackets.png"
 					alt="curly-brackets" />
 				<a href="css_demo.html#syntax">CSS Syntax</a>
 			</div>
 		</div>
 		<div class="d-flex items">
 			<div class="innerDiv"><img width="24" height="24"
-					src="https://img.icons8.com/external-tal-revivo-light-tal-revivo/24/external-hypertext-markup-language-programming-for-web-pages-and-application-text-light-tal-revivo.png"
+					src="https://img.icons8.com/external-tal-revivo-light-tal-revivo/24/ffffff/external-hypertext-markup-language-programming-for-web-pages-and-application-text-light-tal-revivo.png"
 					alt="external-hypertext-markup-language-programming-for-web-pages-and-application-text-light-tal-revivo" />
 				CSS Selectors
-				<img width="25" height="25" src="https://img.icons8.com/windows/32/long-arrow-down.png"
+				<img width="25" height="25" src="https://img.icons8.com/windows/32/ffffff/long-arrow-down.png"
 					class="down-arrow" alt="long-arrow-down" />
-				<img width="24" height="24" src="https://img.icons8.com/material-rounded/24/long-arrow-right.png"
+				<img width="24" height="24" src="https://img.icons8.com/material-rounded/24/ffffff/long-arrow-right.png"
 					class="right-arrow" alt="long-arrow-right" />
 			</div>
 			<ul type="none" class="drop-down">
@@ -145,11 +141,11 @@
 		</div>
 		<div class="d-flex items">
 			<div class="innerDiv">
-				<img width="25" height="25" src="https://img.icons8.com/ios/50/sheets.png" alt="sheets" />
+				<img width="25" height="25" src="https://img.icons8.com/ios/50/ffffff/sheets.png" alt="sheets" />
 				CSS Stylesheets
-				<img width="25" height="25" src="https://img.icons8.com/windows/32/long-arrow-down.png"
+				<img width="25" height="25" src="https://img.icons8.com/windows/32/ffffff/long-arrow-down.png"
 					class="down-arrow" alt="long-arrow-down" />
-				<img width="24" height="24" src="https://img.icons8.com/material-rounded/24/long-arrow-right.png"
+				<img width="24" height="24" src="https://img.icons8.com/material-rounded/24/ffffff/long-arrow-right.png"
 					class="right-arrow" alt="long-arrow-right" />
 			</div>
 			<ul type="none" class="drop-down">
@@ -160,13 +156,13 @@
 		</div>
 		<div class="d-flex">
 			<div class="innerDiv">
-				<img width="25" height="25" src="https://img.icons8.com/ios/50/comments--v1.png" alt="comments--v1" />
+				<img width="25" height="25" src="https://img.icons8.com/ios/50/ffffff/comments--v1.png" alt="comments--v1" />
 				<a href="css_demo.html#comments">CSS Comments</a>
 			</div>
 		</div>
 		<div class="d-flex">
 			<div class="innerDiv">
-				<img width="25" height="25" src="https://img.icons8.com/ios/50/error--v1.png" alt="error--v1" />
+				<img width="25" height="25" src="https://img.icons8.com/ios/50/ffffff/error--v1.png" alt="error--v1" />
 				<a href="css_demo.html#errors">CSS Errors</a>
 			</div>
 		</div>
@@ -176,9 +172,9 @@
 					src="https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/58/external-colors-photography-vitaliy-gorbachev-flat-vitaly-gorbachev.png"
 					alt="external-colors-photography-vitaliy-gorbachev-flat-vitaly-gorbachev" />
 				CSS Colors
-				<img width="25" height="25" src="https://img.icons8.com/windows/32/long-arrow-down.png"
+				<img width="25" height="25" src="https://img.icons8.com/windows/32/ffffff/long-arrow-down.png"
 					class="down-arrow" alt="long-arrow-down" />
-				<img width="24" height="24" src="https://img.icons8.com/material-rounded/24/long-arrow-right.png"
+				<img width="24" height="24" src="https://img.icons8.com/material-rounded/24/ffffff/long-arrow-right.png"
 					class="right-arrow" alt="long-arrow-right" />
 			</div>
 			<ul type="none" class="drop-down">
@@ -194,12 +190,12 @@
 		<div class="d-flex items">
 			<div class="innerDiv">
 				<img width="25" height="25"
-					src="https://img.icons8.com/external-others-cattaleeya-thongsriphong/64/external-background-advertising-outline-others-cattaleeya-thongsriphong-22.png"
+					src="https://img.icons8.com/external-others-cattaleeya-thongsriphong/64/ffffff/external-background-advertising-outline-others-cattaleeya-thongsriphong-22.png"
 					alt="external-background-advertising-outline-others-cattaleeya-thongsriphong-22" />
 				CSS Background
-				<img width="25" height="25" src="https://img.icons8.com/windows/32/long-arrow-down.png"
+				<img width="25" height="25" src="https://img.icons8.com/windows/32/ffffff/long-arrow-down.png"
 					class="down-arrow" alt="long-arrow-down" />
-				<img width="24" height="24" src="https://img.icons8.com/material-rounded/24/long-arrow-right.png"
+				<img width="24" height="24" src="https://img.icons8.com/material-rounded/24/ffffff/long-arrow-right.png"
 					class="right-arrow" alt="long-arrow-right" />
 			</div>
 			<ul type="none" class="drop-down">
@@ -210,12 +206,12 @@
 		</div>
 		<div class="d-flex items">
 			<div class="innerDiv">
-				<img width="25" height="25" src="https://img.icons8.com/ios-filled/50/border-horizontal.png"
+				<img width="25" height="25" src="https://img.icons8.com/ios-filled/50/ffffff/border-horizontal.png"
 					alt="border-horizontal" />
 				CSS Borders
-				<img width="25" height="25" src="https://img.icons8.com/windows/32/long-arrow-down.png"
+				<img width="25" height="25" src="https://img.icons8.com/windows/32/ffffff/long-arrow-down.png"
 					class="down-arrow" alt="long-arrow-down" />
-				<img width="24" height="24" src="https://img.icons8.com/material-rounded/24/long-arrow-right.png"
+				<img width="24" height="24" src="https://img.icons8.com/material-rounded/24/ffffff/long-arrow-right.png"
 					class="right-arrow" alt="long-arrow-right" />
 			</div>
 			<ul type="none" class="drop-down">
@@ -226,7 +222,7 @@
 		</div>
 		<div class="d-flex">
 			<div class="innerDiv">
-				<img width="24" height="24" src="https://img.icons8.com/material-outlined/24/dashboard-layout.png"
+				<img width="24" height="24" src="https://img.icons8.com/material-outlined/24/ffffff/dashboard-layout.png"
 					alt="dashboard-layout" />
 				<a href="css_demo.html#margin">CSS Margins</a>
 			</div>
@@ -234,18 +230,18 @@
 		<div class="d-flex">
 			<div class="innerDiv">
 				<img width="25" height="25"
-					src="https://img.icons8.com/external-tal-revivo-duo-tal-revivo/25/external-focused-image-expanded-with-text-body-layout-template-wireframe-duo-tal-revivo.png"
+					src="https://img.icons8.com/external-tal-revivo-duo-tal-revivo/25/ffffff/external-focused-image-expanded-with-text-body-layout-template-wireframe-duo-tal-revivo.png"
 					alt="external-focused-image-expanded-with-text-body-layout-template-wireframe-duo-tal-revivo" />
 				<a href="css_demo.html#padding">CSS Padding</a>
 			</div>
 		</div>
 		<div class="d-flex items">
 			<div class="innerDiv">
-				<img width="25" height="25" src="https://img.icons8.com/ios/50/surface.png" alt="surface" />
+				<img width="25" height="25" src="https://img.icons8.com/ios/50/ffffff/surface.png" alt="surface" />
 				CSS Height/Width
-				<img width="25" height="25" src="https://img.icons8.com/windows/32/long-arrow-down.png"
+				<img width="25" height="25" src="https://img.icons8.com/windows/32/ffffff/long-arrow-down.png"
 					class="down-arrow" alt="long-arrow-down" />
-				<img width="24" height="24" src="https://img.icons8.com/material-rounded/24/long-arrow-right.png"
+				<img width="24" height="24" src="https://img.icons8.com/material-rounded/24/ffffff/long-arrow-right.png"
 					class="right-arrow" alt="long-arrow-right" />
 			</div>
 			<ul type="none" class="drop-down">
@@ -260,19 +256,19 @@
 		<div class="d-flex">
 			<div class="innerDiv">
 				<img width="24" height="24"
-					src="https://img.icons8.com/external-tal-revivo-filled-tal-revivo/24/external-inside-borders-worksheet-highlight-cell-section-button-table-filled-tal-revivo.png"
+					src="https://img.icons8.com/external-tal-revivo-filled-tal-revivo/24/ffffff/external-inside-borders-worksheet-highlight-cell-section-button-table-filled-tal-revivo.png"
 					alt="external-inside-borders-worksheet-highlight-cell-section-button-table-filled-tal-revivo" />
 				<a href="css_demo.html#box">CSS Box Model</a>
 			</div>
 		</div>
 		<div class="d-flex items">
 			<div class="innerDiv">
-				<img width="25" height="25" src="https://img.icons8.com/ios/50/ios-application-placeholder.png"
+				<img width="25" height="25" src="https://img.icons8.com/ios/50/ffffff/ios-application-placeholder.png"
 					alt="ios-application-placeholder" />
 				CSS Outline
-				<img width="25" height="25" src="https://img.icons8.com/windows/32/long-arrow-down.png"
+				<img width="25" height="25" src="https://img.icons8.com/windows/32/ffffff/long-arrow-down.png"
 					class="down-arrow" alt="long-arrow-down" />
-				<img width="24" height="24" src="https://img.icons8.com/material-rounded/24/long-arrow-right.png"
+				<img width="24" height="24" src="https://img.icons8.com/material-rounded/24/ffffff/long-arrow-right.png"
 					class="right-arrow" alt="long-arrow-right" />
 			</div>
 			<ul type="none" class="drop-down">
@@ -284,11 +280,11 @@
 		</div>
 		<div class="d-flex items">
 			<div class="innerDiv">
-				<img width="25" height="25" src="https://img.icons8.com/ios/50/text.png" alt="text" />
+				<img width="25" height="25" src="https://img.icons8.com/ios/50/ffffff/text.png" alt="text" />
 				CSS Text
-				<img width="25" height="25" src="https://img.icons8.com/windows/32/long-arrow-down.png"
+				<img width="25" height="25" src="https://img.icons8.com/windows/32/ffffff/long-arrow-down.png"
 					class="down-arrow" alt="long-arrow-down" />
-				<img width="24" height="24" src="https://img.icons8.com/material-rounded/24/long-arrow-right.png"
+				<img width="24" height="24" src="https://img.icons8.com/material-rounded/24/ffffff/long-arrow-right.png"
 					class="right-arrow" alt="long-arrow-right" />
 			</div>
 			<ul type="none" class="drop-down">
@@ -302,11 +298,11 @@
 		</div>
 		<div class="d-flex items">
 			<div class="innerDiv">
-				<img width="25" height="25" src="https://img.icons8.com/color/48/fonts-app.png" alt="fonts-app" />
+				<img width="25" height="25" src="https://img.icons8.com/carbon-copy/25/ffffff/fonts-app.png" alt="fonts-app"/>
 				CSS Fonts
-				<img width="25" height="25" src="https://img.icons8.com/windows/32/long-arrow-down.png"
+				<img width="25" height="25" src="https://img.icons8.com/windows/32/ffffff/long-arrow-down.png"
 					class="down-arrow" alt="long-arrow-down" />
-				<img width="24" height="24" src="https://img.icons8.com/material-rounded/24/long-arrow-right.png"
+				<img width="24" height="24" src="https://img.icons8.com/material-rounded/24/ffffff/long-arrow-right.png"
 					class="right-arrow" alt="long-arrow-right" />
 			</div>
 			<ul type="none" class="drop-down">
@@ -319,23 +315,23 @@
 		</div>
 		<div class="d-flex">
 			<div class="innerDiv">
-				<img width="25" height="25" src="https://img.icons8.com/ios/50/medium-icons.png" alt="medium-icons"/>
-				<a href="css_demo.html#links">CSS Icons</a>
+				<img width="25" height="25" src="https://img.icons8.com/ios/50/ffffff/medium-icons.png" alt="medium-icons"/>
+				<a href="css_icons.html#icons">CSS Icons</a>
 			</div>
 		</div>
 		<div class="d-flex">
 			<div class="innerDiv">
-				<img width="25" height="25" src="https://img.icons8.com/external-others-inmotus-design/67/external-Links-basic-web-ui-elements-others-inmotus-design-3.png" alt="external-Links-basic-web-ui-elements-others-inmotus-design-3"/>
+				<img width="25" height="25" src="https://img.icons8.com/external-others-inmotus-design/67/ffffff/external-Links-basic-web-ui-elements-others-inmotus-design-3.png" alt="external-Links-basic-web-ui-elements-others-inmotus-design-3"/>
 				<a href="css_demo.html#links">CSS Links</a>
 			</div>
 		</div>
 		<div class="d-flex items">
 			<div class="innerDiv">
-				<img width="25" height="25" src="https://img.icons8.com/pastel-glyph/64/list.png" alt="list"/>
+				<img width="25" height="25" src="https://img.icons8.com/pastel-glyph/64/ffffff/list.png" alt="list"/>
 				CSS Lists
-				<img width="25" height="25" src="https://img.icons8.com/windows/32/long-arrow-down.png"
+				<img width="25" height="25" src="https://img.icons8.com/windows/32/ffffff/long-arrow-down.png"
 					class="down-arrow" alt="long-arrow-down" />
-				<img width="24" height="24" src="https://img.icons8.com/material-rounded/24/long-arrow-right.png"
+				<img width="24" height="24" src="https://img.icons8.com/material-rounded/24/ffffff/long-arrow-right.png"
 					class="right-arrow" alt="long-arrow-right" />
 			</div>
 			<ul type="none" class="drop-down">
@@ -346,11 +342,11 @@
 		</div>
 		<div class="d-flex items">
 			<div class="innerDiv">
-				<img width="25" height="25" src="https://img.icons8.com/ios/50/table-1.png" alt="table-1"/>
+				<img width="25" height="25" src="https://img.icons8.com/ios/50/ffffff/table-1.png" alt="table-1"/>
 				CSS Tables
-				<img width="25" height="25" src="https://img.icons8.com/windows/32/long-arrow-down.png"
+				<img width="25" height="25" src="https://img.icons8.com/windows/32/ffffff/long-arrow-down.png"
 					class="down-arrow" alt="long-arrow-down" />
-				<img width="24" height="24" src="https://img.icons8.com/material-rounded/24/long-arrow-right.png"
+				<img width="24" height="24" src="https://img.icons8.com/material-rounded/24/ffffff/long-arrow-right.png"
 					class="right-arrow" alt="long-arrow-right" />
 			</div>
 			<ul type="none" class="drop-down">
@@ -361,11 +357,11 @@
 		</div>
 		<div class="d-flex items">
 			<div class="innerDiv">
-				<img width="25" height="25" src="https://img.icons8.com/pastel-glyph/64/monitor--v1.png" alt="monitor--v1"/>
+				<img width="25" height="25" src="https://img.icons8.com/pastel-glyph/64/ffffff/monitor--v1.png" alt="monitor--v1"/>
 				CSS Display
-				<img width="25" height="25" src="https://img.icons8.com/windows/32/long-arrow-down.png"
+				<img width="25" height="25" src="https://img.icons8.com/windows/32/ffffff/long-arrow-down.png"
 					class="down-arrow" alt="long-arrow-down" />
-				<img width="24" height="24" src="https://img.icons8.com/material-rounded/24/long-arrow-right.png"
+				<img width="24" height="24" src="https://img.icons8.com/material-rounded/24/ffffff/long-arrow-right.png"
 					class="right-arrow" alt="long-arrow-right" />
 			</div>
 			<ul type="none" class="drop-down">

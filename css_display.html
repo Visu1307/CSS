@@ -11,7 +11,7 @@
 		rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        *{
+        html{
             background-color: beige;
             font-family: Google Sans;
         }
@@ -24,10 +24,14 @@
         mark{
             background-color: sienna;
             color: beige;
+            padding: 10px;
         }
     </style>
 </head>
 <body>
+    <button id="fixedBtn">
+        <a href="index.html" style="color: bisque; text-decoration: none; z-index: 1; font-size: large; font-weight: bold;">HOME</a>
+    </button>
     <h1>CSS Display</h1>
     <ul>
         <section id="block">
@@ -96,8 +100,8 @@
             <p>
                 If <mark> flex-direction : column </mark> given then <mark> align-items works HORIZANTALLY </mark> and <mark>justify-content works VERTICALLY.</mark>
             </p>
-            <p>gap can be used to put spacing between hortizantal elements.</p>
-            <p>row-gap can be used to put spacing between vertical elements.</p>
+            <p> <mark>gap</mark> can be used to put spacing between hortizantal elements.</p>
+            <p> <mark>row-gap</mark> can be used to put spacing between vertical elements.</p>
         </section>
         <section id="grid">
             <li><mark>display : grid</mark> - It allows to create basic equal-width column values like : </li>
@@ -115,6 +119,49 @@
                 <div class="bd" style="background-color: yellow; height: 100%; width: 100%;">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nemo excepturi ratione sit velit suscipit dolorum similique neque dolorem est nihil aliquam quisquam quos placeat accusantium, veniam a, molestias temporibus.
                 </div>
+            </div>
+            <div class="bd" style="display: grid; grid-template-columns: 1fr 1fr 1fr; margin-top: 20px; gap: 20px; padding: 10px;">
+                <div style="background-color:blue; color:white; padding: 10px;">1</div>
+                <div style="background-color:blue; color:white; padding: 10px;">2</div>
+                <div style="background-color:blue; color:white; padding: 10px;">3</div>
+                <div style="background-color:blue; color:white; padding: 10px;">4</div>
+                <div style="background-color:blue; color:white; padding: 10px;">5</div>
+            </div>
+            <h2>Without Spanning</h2>
+            <div class="bd" style="display: grid; grid-template-columns: 100px 100px 100px; margin-top: 20px; gap: 20px; padding: 10px;">
+                <div style="background-color:gray; color:white; padding: 10px; grid-column: 1 / 3; grid-row: 1;">1</div>
+                <div style="background-color:gray; color:white; padding: 10px; grid-column: 3; grid-row: 1 / 3; height: 80%;">2</div>
+                <div style="background-color:gray; color:white; padding: 10px; grid-column: 1; grid-row: 2;">3</div>
+                <div style="background-color:gray; color:white; padding: 10px; grid-column: 2; grid-row: 2;">4</div>
+            </div>
+            <div class="bd" style="display: grid; grid-template-columns: 300px 300px 300px 300px; margin-top: 20px; gap: 20px; padding: 10px;">
+                <div style="background-color:green; color:white; padding: 10px; grid-column: 1 / 3; grid-row: 1;">grid-column: 1 / 3; grid-row: 1;</div>
+                <div style="background-color:green; color:white; padding: 10px; grid-column: 3 / 5; grid-row: 1;">grid-column: 3 / 5; grid-row: 1;</div>
+                <div style="background-color:green; color:white; padding: 10px; grid-column: 1; grid-row: 2;">grid-column: 1; grid-row: 2;</div>
+                <div style="background-color:green; color:white; padding: 10px; grid-column: 2 / 5; grid-row: 2;">grid-column: 2 / 5; grid-row: 2;</div>
+                <div style="background-color:green; color:white; padding: 10px; grid-column: 1 / 5; grid-row: 3;">grid-column: 1 / 5; grid-row: 3;</div>
+            </div>
+            <h2>With Spanning</h2>
+            <div class="bd" style="display: grid; grid-template-columns: 100px 100px 100px; margin-top: 20px; gap: 20px; padding: 10px;">
+                <div style="background-color:gray; color:white; padding: 10px; grid-column: 1 / span 2; grid-row: 1;">1</div>
+                <div style="background-color:gray; color:white; padding: 10px; grid-column: 3; grid-row: 1 / span 2; height: 80%;">2</div>
+                <div style="background-color:gray; color:white; padding: 10px; grid-column: 1; grid-row: 2;">3</div>
+                <div style="background-color:gray; color:white; padding: 10px; grid-column: 2; grid-row: 2;">4</div>
+            </div>
+            <div class="bd" style="display: grid; grid-template-columns: 300px 300px 300px 300px; margin-top: 20px; gap: 20px; padding: 10px;">
+                <div style="background-color:green; color:white; padding: 10px; grid-column: 1 / span 2; grid-row: 1;">grid-column: 1 / span 2; grid-row: 1;</div>
+                <div style="background-color:green; color:white; padding: 10px; grid-column: 3 / span 2; grid-row: 1;">grid-column: 3 / span 2; grid-row: 1;</div>
+                <div style="background-color:green; color:white; padding: 10px; grid-column: 1; grid-row: 2;">grid-column: 1; grid-row: 2;</div>
+                <div style="background-color:green; color:white; padding: 10px; grid-column: 2 / span 3; grid-row: 2;">grid-column: 2 / span 3; grid-row: 2;</div>
+                <div style="background-color:green; color:white; padding: 10px; grid-column: 1 / span 4; grid-row: 3;">grid-column: 1 / span 4; grid-row: 3;</div>
+            </div>
+            <h2>Practicing</h2>
+            <div class="bd" style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; margin-top: 20px; gap: 20px; padding: 10px;">
+                <div style="height: 100%; background-color:sienna; color:beige; grid-column: 1 / span 2; grid-row: 1;">1</div>
+                <div style="height: 100%; background-color:sienna; color:beige; grid-column: 3; grid-row: 1 / span 2;">2</div>
+                <div style="height: 100%; background-color:sienna; color:beige; grid-column: 4; grid-row: 1 / span 2;">3</div>
+                <div style="height: 100%; background-color:sienna; color:beige; grid-column: 1; grid-row: 2;">4</div>
+                <div style="height: 100%; background-color:sienna; color:beige; grid-column: 2; grid-row: 2;">5</div>
             </div>
         </section>
     </ul>

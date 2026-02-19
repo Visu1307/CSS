@@ -30,6 +30,15 @@ table{
     overflow: scroll;
 }
 
+#fixedBtn{
+    background-color: brown; 
+    width: 100px; 
+    padding: 10px; 
+    position: fixed; 
+    bottom: 30px; 
+    right: 30px;
+}
+
 .bd{
     border: 2px solid black;
 }

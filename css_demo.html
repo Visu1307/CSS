@@ -9,6 +9,11 @@
     <script src="https://kit.fontawesome.com/0121aea965.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <style>
+        @import url('https://fonts.googleapis.com');
+        @font-face {
+            font-family: myCustomFont;
+            src: url('fonts/Betania_Patmos_In/BetaniaPatmosIn-Regular.ttf');
+        }
         html {
             font-size: 20px;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, 'Arial Narrow', Arial, sans-serif, Courier, monospace;
@@ -57,14 +62,6 @@
         }
         #internal {
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, 'Arial Narrow', Arial, sans-serif;
-        }
-        #fixedBtn{
-            background-color: brown; 
-            width: 100px; 
-            padding: 10px; 
-            position: fixed; 
-            bottom: 30px; 
-            right: 30px;
         }
         #firstCap::first-letter {
             text-transform: capitalize;
@@ -385,6 +382,7 @@
     <hr>
     <section id="fonts">
         <h1>Fonts</h1>
+        <p style="font-family: myCustomFont;"> <mark>Custom Fonts Downloaded and Imported</mark> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt error pariatur excepturi dolorem labore ipsam consequatur adipisci accusantium, quam, doloremque asperiores, vitae dolorum commodi? </p>
         <p style="font-family: 'Times New Roman', Times, serif;">This is Times New Roman sans serif fonts.</p>
         <p style="font-family: 'Courier New', Courier, monospace">This is Courier New fonts.</p>
         <p style="font-family: 'Lucida Sans';">This is Lucida Console fonts.</p>
@@ -419,7 +417,7 @@
     <section id="icons">
         <h1>Icons</h1>
         <p>Font awesome icons are used and displayed using classes like : </p>
-        <i class="fas fa-cloud"></i>
+        <i class="fas fa-user fa-2x fa-spin"></i>
         <i class="fas fa-heart"></i>
         <i class="fas fa-car"></i>
         <i class="fas fa-file"></i>
