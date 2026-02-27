@@ -1,3 +1,8 @@
+:root{
+    --primary-color : #088395;
+    --secondary-color : #EBF4F6;
+}
+
 div{
     display: flex;
     align-items: center;
@@ -24,15 +29,15 @@ div{
 table{
     border-style: groove;
     border-width: 2cap;
-    border-color: sienna;
+    border-color: #7AB2B2;
     border-spacing: 20px;
-    width: auto;
+    /* width: auto;  */
     overflow: scroll;
 }
 
 #fixedBtn{
-    background-color: brown; 
-    width: 100px; 
+    background-color: var(--secondary-color); 
+    width: 110px; 
     padding: 10px; 
     position: fixed; 
     bottom: 30px; 
@@ -40,20 +45,20 @@ table{
 }
 
 .bd{
-    border: 2px solid black;
+    border: 2px solid #EBF4F6;
 }
 
-tr:nth-child(even){
-    background-color: rgba(165, 42, 42, 0.384);
-}
+/* tr:nth-child(even){
+    background-color: #7AB2B2;
+} */
 
 th,td{
     height: auto;
-    vertical-align: bottom;
+    vertical-align: middle;
     text-align: center;
     padding: 20px;
 }
 th,td:hover{
-    background-color: sienna;
-    color: beige;
+    background-color: #EBF4F6;
+    color: #088395;
 }

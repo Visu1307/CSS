@@ -4,23 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome-icons/css/all.min.css">
     <style>
         html{
-            background-color: beige;
-            color: brown;
+            background-color: #088395;
+            color: #EBF4F6;
             font-size: larger;
             font-weight: 500;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
         th{
-            background-color: azure
+            background-color: #7AB2B2;
         }
         td{
             color: white;
-            background-color: bisque
+            /* background-color: #EBF4F6; */
         }
         table,th,td{
-            color: black;
+            color: #EBF4F6;
             margin: 5px;
             padding: 10px;
             font-size: larger;
@@ -30,10 +32,12 @@
     </style>
 </head>
 <body>
-    <header style="background-color: brown; color: white;">
-        <h1 style="text-align: center; margin: 0;">CSS Docs</h1>
+    <header style="background-color: #EBF4F6; border-radius: 10px; color: #088395;">
+        <h1 style="text-align: center; margin: 0; padding: 10px;">CSS Docs</h1>
     </header>
-    <a href="index.html" style="text-decoration: none;"><button style="font-size: large; margin: 10px 0 10px 0;">Home</button></a>
+    <button id="fixedBtn">
+        <a href="index.html" style="color: var(--primary-color); text-decoration: none; z-index: 1; font-size: large; font-weight: bold;"><i class="fas fa-home" style="color: var(--primary-color);"></i>&nbsp;HOME</a>
+     </button>
     <hr>
     <h3><abbr title="Cascading Style Sheet">CSS</abbr></h3>
     <p>It is used to style web pages.</p>
@@ -70,7 +74,9 @@
     </ul>
     <hr>
     <section id="differences">
-        <h3>Difference between Old CSS & Current CSS</h3>
+        <center>
+            <h3>Difference between Old CSS & Current CSS</h3>
+        </center>
         <table>
             <thead>
                 <tr>
@@ -109,6 +115,47 @@
                     <th>Maintainability</th>
                     <td>Hard</td>
                     <td>Easy Scalable</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section id="flexvsgrid">
+        <center>
+            <h3>Difference between CSS Display Flex and Display Grid</h3>
+        </center>
+        <table>
+            <thead>
+                <tr>
+                    <th>Property</th>
+                    <th>CSS Grid</th>
+                    <th>CSS Flexbox</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Dimensions</th>
+                    <td>Two-dimensional (rows and columns)</td>
+                    <td>One-dimensional (either a row or a column)</td>
+                </tr>
+                <tr>
+                    <th>Approach</th>
+                    <td>Layout-first; you define the grid structure and place items into it</td>
+                    <td>Content-first; items flow naturally and flex to fit the available space</td>
+                </tr>
+                <tr>
+                    <th>Use Case</th>
+                    <td>Complex page layouts, dashboards, or designs requiring precise 2D control</td>
+                    <td>Small components like navigation bars, aligning items within a container, or simple lists</td>
+                </tr>
+                <tr>
+                    <th>Control</th>
+                    <td>Parent container has complete control over child placement and sizing</td>
+                    <td>Child items have more control over their own growth and shrinking behavior</td>
+                </tr>
+                <tr>
+                    <th>Gaps</th>
+                    <td>gap property provides spacing between both rows and columns</td>
+                    <td>gap property can be used, but the core model is a single line, so behavior can be less intuitive with wrapping</td>
                 </tr>
             </tbody>
         </table>

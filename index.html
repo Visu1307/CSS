@@ -5,6 +5,27 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="style.css">
+	<script>
+		function testLS() {
+			const unm = document.getElementById("unm");
+			if(localStorage.getItem("username")){
+				localStorage.clear();
+				unm.textContent = "Login";
+			}
+			else{
+				const user = prompt("Enter Username : ");
+				localStorage.setItem("username", user);
+				unm.textContent = "Hi "+user;
+			}
+		}
+
+		function testCookie() {
+			document.cookie = "username=Vishwas; max-age=30";
+			document.cookie = "password=Visu@1307; max-age=30; secure;";
+			console.log("Cookie Set");
+		}
+	</script>
 	<link
 		href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
 		rel="stylesheet">
@@ -18,7 +39,7 @@
 			font-size: large;
 			color: beige;
 			font-weight: bolder;
-			background-color: sienna;
+			background-color: #09637E;
 			opacity: 0.6;
 			ul {
 				display: flex;
@@ -40,7 +61,7 @@
 			height: calc(100vh - 105px);
 			width: 16%;
 			font-size: larger;
-			background-color: sienna;
+			background-color: var(--primary-color,teal);
 			color: beige;
 			padding: 10px;
 			overflow-y: scroll;
@@ -86,13 +107,16 @@
 
 <body>
 	<nav>
-		<ul type="none">
-			<li><a href="../HTML/index.html">HTML</a></li>
-			<li>CSS</li>
-			<li>Javascript</li>
-			<li>SQL</li>
-			<li>Python</li>
-			<li>Java</li>
+		<ul type="none" style="display: flex; justify-content: space-between;">
+			<div style="column-gap: 20px;">
+				<li><a href="../HTML/index.html">HTML</a></li>
+				<li>CSS</li>
+				<li onclick="testCookie()">Javascript</li>
+				<li>SQL</li>
+				<li>Python</li>
+				<li>Java</li>
+			</div>
+			<li id="unm" onload="testLS()" onclick="testLS()">Login</li>
 			<!-- <li><input type="color"
 					oninput="document.body.style.backgroundColor = document.getElementById('mainColor').value"
 					id="mainColor" value="#ffffff" width="150px"></li> -->
@@ -368,8 +392,8 @@
 				<li><a href="css_display.html#inline">Inline</a></li>
 				<li><a href="css_display.html#block">Block</a></li>
 				<li><a href="css_display.html#inblock">Inline-Block</a></li>
-				<li><a href="css_display.html#flex">Flex</a></li>
-				<li><a href="css_display.html#grid">Grid</a></li>
+				<li><a href="flex.html">Flex</a></li>
+				<li><a href="grid.html">Grid</a></li>
 				<li><a href="css_display.html#none">None</a></li>
 			</ul>
 		</div>

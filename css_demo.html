@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Demo</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/0121aea965.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="fontawesome-icons/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com');
         @font-face {
@@ -17,22 +17,25 @@
         html {
             font-size: 20px;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, 'Arial Narrow', Arial, sans-serif, Courier, monospace;
-            background-color: beige;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
         }
         mark {
-            color: white;
-            background-color: sienna;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
         }
         h1 {
-            background-color: sienna;
-            color: white;
+            color: var(--primary-color);
+            padding: 10px;
+            border-radius: 20px;
+            background-color: var(--secondary-color);
             text-align: center;
         }
         .bg-img {
             width: 500px;
             height: 500px;
             background: url("img/small.jpg") no-repeat;
-            border: 2px solid black;
+            border: 2px solid var(--secondary-color);
         }
         .bg-img-repX {
             background-repeat: repeat-x;
@@ -49,7 +52,7 @@
             background-position: center;
         }
         .bd {
-            border: 2px solid black;
+            border: 2px solid var(--secondary-color);
         }
         .inline {
             display: inline-block;
@@ -71,7 +74,7 @@
 
 <body>
     <button id="fixedBtn">
-        <a href="index.html" style="color: bisque; text-decoration: none; z-index: 1; font-size: large; font-weight: bold;">HOME</a>
+        <a href="index.html" style="color: var(--primary-color); text-decoration: none; z-index: 1; font-size: medium; font-weight: bold;"><i class="fas fa-home"></i>&nbsp; HOME</a>
     </button>
     </div>
     <section id="syntax">
@@ -150,8 +153,8 @@
             <li>Using rgb like : <b style="color: rgb(200,0,0);">RED : 200, GREEN : 0, BLUE : 0</b></li>
             <li>Using rgba like : <b style="color: rgba(0, 0, 250, 0.5);">RED : 0, GREEN : 0, BLUE : 250, ALPHA
                     (OPACITY) : 0.5</b></li>
-            <li>Using hex values like : <b style="color: #ff0000;">#ff0000 - ff:MAX 00:MIN</b></li>
-            <li>Using hexa values like : <b style="color: #ff000079;">#ff - RED MAX, 00 - BLUE GREEN 0, Opacity 80%</b>
+            <li>Using hex values like : <b style="color: var(--secondary-color);">var(--secondary-color) - ff:MAX 00:MIN</b></li>
+            <li>Using hexa values like : <b style="color: var(--secondary-color)79;">#ff - RED MAX, 00 - BLUE GREEN 0, Opacity 80%</b>
             </li>
             <li>Using hsl values like : <b style="color: hsl(180, 50%, 20%);">HUE : 180 <sup><small>o</small></sup>,
                     SATURATION : 50%, LIGHTNESS : 20%</b></li>
@@ -165,15 +168,15 @@
         <ol>
             <li>
                 <h3>background-color : </h3>
-                <div style="background-color: green; color: white;">
+                <div style="background-color: green; color: var(--secondary-color);">
                     This is background color property used.
                 </div>
             </li>
             <li>
                 <h3>background-image (default) :</h3>
-                <div style="border: 0.5px solid black; " class="bg-img"></div>
+                <div style="border: 0.5px solid var(--secondary-color); " class="bg-img"></div>
                 <h3>background-image (repeatX)</h3>
-                <div style="border: 1px solid black" class="bg-img bg-img-repX"></div>
+                <div style="border: 1px solid var(--secondary-color)" class="bg-img bg-img-repX"></div>
                 <h3>background-image (repeatY)</h3>
                 <div class="bg-img bg-img-repY"></div>
                 <h3>background-image (no-repeat)</h3>
@@ -193,76 +196,76 @@
     <hr>
     <section id="borders">
         <h1>Borders</h1>
-        <div style="border: 2px solid black; margin-top: 10px; color:unset">Border 2px Solid Black</div>
-        <div style="border: 2px dotted black; margin-top: 10px; color:unset">Border 2px Dotted Black</div>
-        <div style="border: 2.5px dashed black; margin-top: 10px; color:unset">Border 2px Dashed Black</div>
+        <div style="border: 2px solid var(--secondary-color); margin-top: 10px; color:unset">Border 2px Solid Black</div>
+        <div style="border: 2px dotted var(--secondary-color); margin-top: 10px; color:unset">Border 2px Dotted Black</div>
+        <div style="border: 2.5px dashed var(--secondary-color); margin-top: 10px; color:unset">Border 2px Dashed Black</div>
         <div style="border: 5px solid; border-color: red blue; height: 100px; margin-top: 10px;">Border 2px Solid Red &
             Blue</div>
         <div style="border: 5px solid; border-color: red green blue yellow; height: 100px; margin-top: 10px;">Border 2px
             Solid Red, Green, Blue, Yellow</div>
-        <div style="border: 5px solid; border-color: black; border-radius: 20px; height: 100px; margin-top: 10px;">
+        <div style="border: 5px solid; border-color: var(--secondary-color); border-radius: 20px; height: 100px; margin-top: 10px;">
             Rounded Corners Using Border Radius 20px</div>
     </section>
     <hr>
     <section id="margin">
         <h1>Margins</h1>
-        <div style="margin: 40px; border: 2px solid black; height: 50px; width: 200px;">Full Margin 20px</div>
-        <div style="margin-top: 20px; border: 2px solid black; height: 50px; width: 200px;">Top Margin 20px</div>
-        <div style="margin-right: 20px; border: 2px solid black; height: 50px; width: 200px;">Right Margin 20px</div>
-        <div style="margin-bottom: 20px; border: 2px solid black; height: 50px; width: 200px;">Bottom Margin 20px</div>
-        <div style="margin-left: 20px; border: 2px solid black; height: 50px; width: 200px;">Left Margin 20px</div>
-        <div style="margin: 20px 40px; border: 2px solid black; height: 50px; width: 200px;">Top & Bottom Margin 20px,
+        <div style="margin: 40px; border: 2px solid var(--secondary-color); height: 50px; width: 200px;">Full Margin 20px</div>
+        <div style="margin-top: 20px; border: 2px solid var(--secondary-color); height: 50px; width: 200px;">Top Margin 20px</div>
+        <div style="margin-right: 20px; border: 2px solid var(--secondary-color); height: 50px; width: 200px;">Right Margin 20px</div>
+        <div style="margin-bottom: 20px; border: 2px solid var(--secondary-color); height: 50px; width: 200px;">Bottom Margin 20px</div>
+        <div style="margin-left: 20px; border: 2px solid var(--secondary-color); height: 50px; width: 200px;">Left Margin 20px</div>
+        <div style="margin: 20px 40px; border: 2px solid var(--secondary-color); height: 50px; width: 200px;">Top & Bottom Margin 20px,
             Left & Right Margin 40px</div>
-        <div style="margin: 10px 20px 30px 40px; border: 2px solid black; height: 50px; width: 200px;">Top 10px, Right
+        <div style="margin: 10px 20px 30px 40px; border: 2px solid var(--secondary-color); height: 50px; width: 200px;">Top 10px, Right
             20px, Bottom 30px, Left 40px</div>
     </section>
     <hr>
     <section id="padding">
         <h1>Padding</h1>
-        <div style="padding: 50px; border: 2px solid black; margin-top: 20px;">This content is 50px fully padded. <br>
+        <div style="padding: 50px; border: 2px solid var(--secondary-color); margin-top: 20px;">This content is 50px fully padded. <br>
             <h5>New Line</h5>
         </div>
-        <div style="padding-top: 50px; border: 2px solid black; margin-top: 20px;">This content is 50px top padded.
+        <div style="padding-top: 50px; border: 2px solid var(--secondary-color); margin-top: 20px;">This content is 50px top padded.
         </div>
-        <div style="padding-right: 50px; border: 2px solid black; margin-top: 20px;">This content is 50px right padded.
+        <div style="padding-right: 50px; border: 2px solid var(--secondary-color); margin-top: 20px;">This content is 50px right padded.
         </div>
-        <div style="padding-left: 50px; border: 2px solid black; margin-top: 20px;">This content is 50px left padded.
+        <div style="padding-left: 50px; border: 2px solid var(--secondary-color); margin-top: 20px;">This content is 50px left padded.
         </div>
-        <div style="padding-bottom: 50px; border: 2px solid black; margin-top: 20px;">This content is 50px bottom
+        <div style="padding-bottom: 50px; border: 2px solid var(--secondary-color); margin-top: 20px;">This content is 50px bottom
             padded.</div>
-        <div style="padding : 50px 80px; border: 2px solid black; margin-top: 20px;">This content is 50px top-bottom
+        <div style="padding : 50px 80px; border: 2px solid var(--secondary-color); margin-top: 20px;">This content is 50px top-bottom
             padded & 80px left-right padded.</div>
-        <div style="padding : 40px 50px 60px 70px;  border: 2px solid black; margin-top: 20px;">This content is top
+        <div style="padding : 40px 50px 60px 70px;  border: 2px solid var(--secondary-color); margin-top: 20px;">This content is top
             40px, right 50px, bottom 60px, and left 70px padded.</div>
     </section>
     <hr>
     <section id="height">
         <h1>Height</h1>
-        <div style="height: 10px; border: 2px solid black;">This div has height of 10px</div>
-        <div style="height: 100%; border: 2px solid black;">This div has height of 100%</div>
-        <div style="height: 10rem; border: 2px solid black;">This div has height of 10rem</div>
-        <div style="height: 10cm; border: 2px solid black;">This div has height of 10cm</div>
-        <div style="min-height: 100px; height: 50px; border: 2px solid black;">This div has min-height of 100px given
+        <div style="height: 10px; border: 2px solid var(--secondary-color);">This div has height of 10px</div>
+        <div style="height: 100%; border: 2px solid var(--secondary-color);">This div has height of 100%</div>
+        <div style="height: 10rem; border: 2px solid var(--secondary-color);">This div has height of 10rem</div>
+        <div style="height: 10cm; border: 2px solid var(--secondary-color);">This div has height of 10cm</div>
+        <div style="min-height: 100px; height: 50px; border: 2px solid var(--secondary-color);">This div has min-height of 100px given
             50px prevents smaller than 100px.</div>
-        <div style="max-height: 100px; height: 150px; border: 2px solid black;">This div has max-height of 100px given
+        <div style="max-height: 100px; height: 150px; border: 2px solid var(--secondary-color);">This div has max-height of 100px given
             150px prevents bigger than 100px.</div>
     </section>
     <hr>
     <section id="width">
         <h1>Width</h1>
-        <div style="width: 100px; border: 2px solid black;">This div has width of 100px</div>
-        <div style="width: 100%; border: 2px solid black;">This div has width of 100%</div>
-        <div style="width: 10rem; border: 2px solid black;">This div has width of 10rem</div>
-        <div style="width: 10cm; border: 2px solid black;">This div has width of 10cm</div>
-        <div style="min-width: 200px; width: 50px; border: 2px solid black;">This div has min-width of 200px given 50px
+        <div style="width: 100px; border: 2px solid var(--secondary-color);">This div has width of 100px</div>
+        <div style="width: 100%; border: 2px solid var(--secondary-color);">This div has width of 100%</div>
+        <div style="width: 10rem; border: 2px solid var(--secondary-color);">This div has width of 10rem</div>
+        <div style="width: 10cm; border: 2px solid var(--secondary-color);">This div has width of 10cm</div>
+        <div style="min-width: 200px; width: 50px; border: 2px solid var(--secondary-color);">This div has min-width of 200px given 50px
             prevents smaller than 200px.</div>
-        <div style="max-width: 200px; width: 250px; border: 2px solid black;">This div has max-width of 200px given
+        <div style="max-width: 200px; width: 250px; border: 2px solid var(--secondary-color);">This div has max-width of 200px given
             250px prevents bigger than 200px.</div>
     </section>
     <hr>
     <section id="box">
         <h1>Box Model</h1>
-        <div style="height: 200px; width: 200px; border: 10px solid black; margin: 60px; padding: 50px;">
+        <div style="height: 200px; width: 200px; border: 10px solid var(--secondary-color); margin: 60px; padding: 50px;">
             <h3>Calculation for CSS Box Model</h3>
         </div>
         <p>Given width = 200px, height = 200px, border = 10px, margin = 60px, padding = 50px</p>
@@ -279,19 +282,19 @@
         <h1>Outline</h1>
         <div style="display: flex; flex-wrap: wrap; gap: 10px;">
             <div
-                style="outline-style: solid; outline-color: #ff0000; margin: 200px; outline-width: 25px; outline-offset: 100px;  height: 200px; width: 200px;">
+                style="outline-style: solid; outline-color: var(--secondary-color); margin: 200px; outline-width: 25px; outline-offset: 100px;  height: 200px; width: 200px;">
                 It is outline. Not counted in box model.
             </div>
             <div
-                style="outline-style: groove; outline-color: #ff0000; margin: 200px; outline-width: 25px; outline-offset: 100px;  height: 200px; width: 200px;">
+                style="outline-style: groove; outline-color: var(--secondary-color); margin: 200px; outline-width: 25px; outline-offset: 100px;  height: 200px; width: 200px;">
                 It is Groove outline. Not counted in box model.
             </div>
             <div
-                style="outline-style: ridge; outline-color: #ff0000; margin: 200px; outline-width: 25px; outline-offset: 100px;  height: 200px; width: 200px;">
+                style="outline-style: ridge; outline-color: var(--secondary-color); margin: 200px; outline-width: 25px; outline-offset: 100px;  height: 200px; width: 200px;">
                 It is Ridge outline. Not counted in box model.
             </div>
             <div
-                style="outline-style: dotted; outline-color: #ff0000; border: 20px solid blue; margin: 200px; outline-width: 25px;  height: 200px; width: 200px;">
+                style="outline-style: dotted; outline-color: var(--secondary-color); border: 20px solid blue; margin: 200px; outline-width: 25px;  height: 200px; width: 200px;">
                 Difference between border (blue) and outline (red).
             </div>
         </div>
@@ -306,7 +309,7 @@
     <section id="text">
         <h1>Text</h1>
         <ul>
-            <li>color : <span style="color: #ff0000;">Color of this text has been changed to red.</span></li>
+            <li>color : <span style="color: var(--secondary-color);">Color of this text has been changed to red.</span></li>
             <li>alignment : <span>You can align text wherever you want like : </span></li>
             <p class="bd" style="text-align: start;">Text-START</p>
             <p class="bd" style="text-align: center;">Text-CENTER</p>

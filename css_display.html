@@ -12,25 +12,27 @@
     <link rel="stylesheet" href="style.css">
     <style>
         html{
-            background-color: beige;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
             font-family: Google Sans;
         }
         h1{
-            background-color: sienna;
-            color: beige;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
             text-align: center;
-            font-size: 3rem;
+            font-size: 2rem;
+            border-radius: 20px ;
         }
         mark{
-            background-color: sienna;
-            color: beige;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
             padding: 10px;
         }
     </style>
 </head>
 <body>
     <button id="fixedBtn">
-        <a href="index.html" style="color: bisque; text-decoration: none; z-index: 1; font-size: large; font-weight: bold;">HOME</a>
+        <a href="index.html" style="color: var(--primary-color); text-decoration: none; z-index: 1; font-size: large; font-weight: bold;">HOME</a>
     </button>
     <h1>CSS Display</h1>
     <ul>
@@ -101,7 +103,7 @@
                 If <mark> flex-direction : column </mark> given then <mark> align-items works HORIZANTALLY </mark> and <mark>justify-content works VERTICALLY.</mark>
             </p>
             <p> <mark>gap</mark> can be used to put spacing between hortizantal elements.</p>
-            <p> <mark>row-gap</mark> can be used to put spacing between vertical elements.</p>
+            <p> <mark>row-gap</mark>     can be used to put spacing between vertical elements.</p>
         </section>
         <section id="grid">
             <li><mark>display : grid</mark> - It allows to create basic equal-width column values like : </li>
