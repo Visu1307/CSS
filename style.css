@@ -37,13 +37,15 @@ table{
 
 #fixedBtn{
     background-color: var(--secondary-color); 
-    width: 110px; 
+    width: 120px; 
     padding: 10px; 
     position: fixed; 
     bottom: 30px; 
     right: 30px;
-}
-
+    opacity: 0.8;
+    border: 5px solid var(--secondary-color);
+    border-radius: 20px;
+}   
 .bd{
     border: 2px solid #EBF4F6;
 }

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Display Flex</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome-icons/css/all.min.css">
     <style>
         html{
             color: var(--secondary-color);
@@ -16,19 +17,28 @@
             color: var(--primary-color);
             background-color: var(--secondary-color);
         }
+        hr{
+            margin: 50px 0 50px 0;
+        }
         .bd{
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             padding: 10px;
             font-weight: 500;
         }
+        .container{
+            background-color: teal;
+        }
     </style>
 </head>
 <body>
+    <button id="fixedBtn">
+        <a href="index.html" style="color: var(--primary-color); text-decoration: none; z-index: 1; font-size: large; font-weight: bold;"><i class="fas fa-home" style="color: var(--primary-color);"></i>&nbsp;HOME</a>
+     </button>
     <center>
         <h1 style="background-color: var(--secondary-color); color: var(--primary-color); padding: 10px; border-radius: 20px;">CSS Display Flex</h1>
     </center>
     <h1>Flex-Direction : <mark>Row (DEFAULT)</mark> </h1>
-    <div style="display: flex; flex-wrap: wrap;">
+    <div class="container" style="display: flex;">
         <div class="bd">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus itaque asperiores quo dolores saepe, cumque eos magni,
         </div>
@@ -42,8 +52,9 @@
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus itaque asperiores quo dolores saepe, cumque eos magni,
         </div>
     </div>
+    <hr/>
     <h1>Flex-Direction : <mark>Column</mark> </h1>
-    <div style="display: flex; flex-wrap: wrap; flex-direction: column;">
+    <div class="container" style="display: flex; flex-wrap: wrap; flex-direction: column;">
         <div class="bd">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus itaque 1 asperiores quo dolores saepe, cumque eos magni,
         </div>
@@ -57,8 +68,9 @@
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus itaque 4 asperiores quo dolores saepe, cumque eos magni,
         </div>
     </div>
+    <hr/>
     <h1>Flex-Direction : <mark>Column-Reverse</mark></h1>
-    <div style="display: flex; flex-wrap: wrap; flex-direction: column-reverse;">
+    <div class="container" style="display: flex; flex-wrap: wrap; flex-direction: column-reverse;">
         <div class="bd">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus itaque 1 asperiores quo dolores saepe, cumque eos magni,
         </div>
@@ -72,23 +84,25 @@
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus itaque 4 asperiores quo dolores saepe, cumque eos magni,
         </div>
     </div>
+    <hr>
     <h1>Flex-Direction : <mark>Row-Reverse</mark>, Flex-wrap : <mark>Wrap</mark> </h1>
-    <div style="display: flex; flex-wrap: wrap; flex-direction: row-reverse;">
+    <div class="container" style="display: flex; flex-wrap: wrap; flex-direction: row-reverse;">
         <div class="bd">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus itaque 1 asperiores quo dolores saepe, cumque eos magni,
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus itaque 1 asperiores  dolores saepe, cumque eos magni,
         </div>
         <div class="bd">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus itaque 2 asperiores quo dolores saepe, cumque eos magni, 
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus itaque 2 asperiores  dolores saepe, cumque eos magni, 
         </div>
         <div class="bd">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus itaque 3 asperiores quo dolores saepe, cumque eos magni, 
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus itaque 3 asperiores  dolores saepe, cumque eos magni, 
         </div>
         <div class="bd">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus itaque 4 asperiores quo dolores saepe, cumque eos magni,
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus itaque 4 asperiores  dolores saepe, cumque eos magni,
         </div>
     </div>
+    <hr/>
     <h1>Flex-Direction : <mark>Row-Reverse</mark>, Flex-wrap : <mark>No-Wrap</mark> </h1>
-    <div style="display: flex; flex-wrap: nowrap; flex-direction: row-reverse;">
+    <div class="container" style="display: flex; flex-wrap: nowrap; flex-direction: row-reverse;">
         <div class="bd">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus itaque 1 asperiores quo dolores saepe, cumque eos magni,
         </div>
@@ -102,38 +116,41 @@
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus itaque 4 asperiores quo dolores saepe, cumque eos magni,
         </div>
     </div>
+    <hr/>
     <h1>Flex-Direction : <mark>Row-Reverse</mark>, Flex-wrap : <mark>wrap-reverse</mark> </h1>
-    <div style="display: flex; flex-wrap: wrap-reverse; flex-direction: row-reverse;">
+    <div class="container" style="display: flex; flex-wrap: wrap-reverse; flex-direction: row-reverse;">
         <div class="bd">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus itaque 1 asperiores quo dolores saepe, cumque eos magni,
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus itaque 1 asperiores  dolores saepe, cumque eos magni,
         </div>
         <div class="bd">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus itaque 2 asperiores quo dolores saepe, cumque eos magni, 
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus itaque 2 asperiores  dolores saepe, cumque eos magni, 
         </div>
         <div class="bd">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus itaque 3 asperiores quo dolores saepe, cumque eos magni, 
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus itaque 3 asperiores  dolores saepe, cumque eos magni, 
         </div>
         <div class="bd">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus itaque 4 asperiores quo dolores saepe, cumque eos magni,
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus itaque 4 asperiores  dolores saepe, cumque eos magni,
         </div>
     </div>
+    <hr/>
     <h1>Flex-Flow : <mark>row wrap</mark> </h1>
-    <div style="display: flex; flex-flow: row wrap;">
+    <div class="container" style="display: flex; flex-flow: row wrap;">
         <div class="bd">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus itaque 1 asperiores quo dolores saepe, cumque eos magni,
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus itaque 1 asperiores  dolores saepe, cumque eos magni,
         </div>
         <div class="bd">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus itaque 2 asperiores quo dolores saepe, cumque eos magni, 
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus itaque 2 asperiores  dolores saepe, cumque eos magni, 
         </div>
         <div class="bd">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus itaque 3 asperiores quo dolores saepe, cumque eos magni, 
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus itaque 3 asperiores  dolores saepe, cumque eos magni, 
         </div>
         <div class="bd">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus itaque 4 asperiores quo dolores saepe, cumque eos magni,
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus itaque 4 asperiores  dolores saepe, cumque eos magni,
         </div>
     </div>
+    <hr/>
     <h1>align-items (VERTICALLY) : <mark>start</mark>, justify-content (HORIZANTALLY) : <mark>end</mark></h1>
-    <div style="display: flex; flex-flow: row wrap; align-items: start; justify-content: end; border: 5px solid var(--secondary-color); height: 100px;">
+    <div class="container" style="display: flex; flex-flow: row wrap; align-items: start; justify-content: end; border: 5px solid var(--secondary-color); height: 100px;">
         <div class="bd">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
         </div>
@@ -147,8 +164,9 @@
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
         </div>
     </div>
+    <hr>
     <h1>align-items (VERTICALLY) : <mark>center</mark>, justify-content (HORIZANTALLY) : <mark>center</mark></h1>
-    <div style="display: flex; flex-flow: row wrap; align-items: center; justify-content: center; border: 5px solid var(--secondary-color); height: 100px;">
+    <div class="container" style="display: flex; flex-flow: row wrap; align-items: center; justify-content: center; border: 5px solid var(--secondary-color); height: 100px;">
         <div class="bd">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
         </div>
@@ -162,8 +180,9 @@
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
         </div>
     </div>
+    <hr/>
     <h1>align-items (VERTICALLY) : <mark>end</mark>, justify-content (HORIZANTALLY) : <mark>start</mark></h1>
-    <div style="display: flex; flex-flow: row wrap; align-items: end; justify-content: start; border: 5px solid var(--secondary-color); height: 100px;">
+    <div class="container" style="display: flex; flex-flow: row wrap; align-items: end; justify-content: start; border: 5px solid var(--secondary-color); height: 100px;">
         <div class="bd">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
         </div>
@@ -177,8 +196,9 @@
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
         </div>
     </div>
+    <hr/>
     <h1>align-items (VERTICALLY) : <mark>center</mark>, justify-content (HORIZANTALLY) : <mark>space-around</mark></h1>
-    <div style="display: flex; flex-flow: row wrap; align-items: center; justify-content: space-around; border: 5px solid var(--secondary-color); height: 100px;">
+    <div class="container" style="display: flex; flex-flow: row wrap; align-items: center; justify-content: space-around; border: 5px solid var(--secondary-color); height: 100px;">
         <div class="bd">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
         </div>
@@ -187,7 +207,7 @@
         </div>
     </div>
     <h1>align-items (VERTICALLY) : <mark>center</mark>, justify-content (HORIZANTALLY) : <mark>space-between</mark></h1>
-    <div style="display: flex; flex-flow: row wrap; align-items: center; justify-content: space-between; border: 5px solid var(--secondary-color); height: 100px;">
+    <div class="container" style="display: flex; flex-flow: row wrap; align-items: center; justify-content: space-between; border: 5px solid var(--secondary-color); height: 100px;">
         <div class="bd">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
         </div>
@@ -195,8 +215,9 @@
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
         </div>
     </div>
+    <hr/>
     <h1>align-items (VERTICALLY) : <mark>center</mark>, justify-content (HORIZANTALLY) : <mark>space-evenly</mark></h1>
-    <div style="display: flex; flex-flow: row wrap; align-items: center; justify-content: space-evenly; border: 5px solid var(--secondary-color); height: 100px;">
+    <div class="container" style="display: flex; flex-flow: row wrap; align-items: center; justify-content: space-evenly; border: 5px solid var(--secondary-color); height: 100px;">
         <div class="bd">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
         </div>
@@ -210,8 +231,9 @@
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
         </div>
     </div>
+    <hr/>
     <h1>align-items (VERTICALLY) : <mark>stretch</mark>, justify-content (HORIZANTALLY) : <mark>center</mark></h1>
-    <div style="display: flex; flex-flow: row wrap; align-items: stretch; justify-content: center; border: 5px solid var(--secondary-color); height: 150px;">
+    <div class="container" style="display: flex; flex-flow: row wrap; align-items: stretch; justify-content: center; border: 5px solid var(--secondary-color); height: 150px;">
         <div class="bd">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
         </div>
@@ -226,8 +248,9 @@
         </div> -->
     </div>
     <h3>stretch will won't work in justify-content.</h3>
+    <hr/>
     <h1>row-gap : <mark>20px</mark></h1>
-    <div style="display: flex; flex-flow: column wrap; border: 5px solid var(--secondary-color); height: 150px; row-gap: 20px;">
+    <div class="container" style="display: flex; flex-flow: column wrap; border: 5px solid var(--secondary-color); height: 150px; row-gap: 20px;">
         <div class="bd">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
         </div>
@@ -241,8 +264,9 @@
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
         </div>
     </div>
+    <hr/>
     <h1>column-gap : <mark>20px</mark></h1>
-    <div style="display: flex; flex-flow: row wrap; border: 5px solid var(--secondary-color); height: 150px; column-gap: 20px;">
+    <div class="container" style="display: flex; flex-flow: row wrap; border: 5px solid var(--secondary-color); height: 150px; column-gap: 20px;">
         <div class="bd">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
         </div>
@@ -256,8 +280,9 @@
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
         </div>
     </div>
+    <hr/>
     <h1>gap : <mark>10px</mark> (Row-Gap) <mark>20px</mark> (Column-Gap)     </h1>
-    <div style="display: flex; flex-flow: row wrap; border: 5px solid var(--secondary-color); height: 160px; gap: 10px 50px;">
+    <div class="container" style="display: flex; flex-flow: row wrap; border: 5px solid var(--secondary-color); height: 160px; gap: 10px 50px;">
         <div class="bd">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
         </div>
@@ -277,8 +302,9 @@
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
         </div>
     </div>
+    <hr/>
     <h1>flex-grow : <mark>1/1/2</mark></h1>
-    <div style="display: flex; border: 5px solid var(--secondary-color); height: 160px; gap: 10px;">
+    <div class="container" style="display: flex; border: 5px solid var(--secondary-color); height: 160px; gap: 10px;">
         <div class="bd" style="flex-grow: 1;">
             flex grow 1
         </div>
@@ -289,8 +315,9 @@
             flex grow 2
         </div>
     </div>
+    <hr/>
     <h1>flex-shrink : <mark>1/1/2</mark></h1>
-    <div style="display: flex; border: 5px solid var(--secondary-color); height: 160px; gap: 10px;">
+    <div class="container" style="display: flex; border: 5px solid var(--secondary-color); height: 160px; gap: 10px;">
         <div class="bd" style="flex-shrink: 1; width: 100%;">
             flex-shrink 1
         </div>
@@ -302,8 +329,9 @@
         </div>
     </div>
     <h3>If we provide flex-shrink as well as flex-wrap then flex-shrink will won't work.</h3>
+    <hr/>
     <h1>flex-basis : <mark>50px/100px/200px</mark></h1>
-    <div style="display: flex; border: 5px solid var(--secondary-color); height: 160px; gap: 10px;">
+    <div class="container" style="display: flex; border: 5px solid var(--secondary-color); height: 160px; gap: 10px;">
         <div class="bd" style="flex-basis: 50px; width: 100%;">
             flex-basis 50px
         </div>
@@ -314,5 +342,6 @@
             flex-basis 200px
         </div>
     </div>
+    <hr/>
 </body>
 </html>
