@@ -10,20 +10,24 @@
     <link rel="stylesheet" href="fontawesome-icons/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com');
+
         @font-face {
             font-family: myCustomFont;
             src: url('fonts/Betania_Patmos_In/BetaniaPatmosIn-Regular.ttf');
         }
+
         html {
             font-size: 20px;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, 'Arial Narrow', Arial, sans-serif, Courier, monospace;
             background-color: var(--primary-color);
             color: var(--secondary-color);
         }
+
         mark {
             background-color: var(--secondary-color);
             color: var(--primary-color);
         }
+
         h1 {
             color: var(--primary-color);
             padding: 10px;
@@ -31,41 +35,69 @@
             background-color: var(--secondary-color);
             text-align: center;
         }
+
         .bg-img {
             width: 500px;
             height: 500px;
             background: url("img/small.jpg") no-repeat;
             border: 2px solid var(--secondary-color);
         }
+
         .bg-img-repX {
             background-repeat: repeat-x;
         }
+
         .bg-img-repY {
             background-repeat: repeat-y;
         }
+
         .bg-img-no-rep {
             background-repeat: no-repeat;
             background-size: 100%;
         }
+
         .bg-img-no-rep-pos {
             background-repeat: no-repeat;
             background-position: center;
         }
+
         .bd {
             border: 2px solid var(--secondary-color);
         }
+
         .inline {
             display: inline-block;
             vertical-align: middle;
             height: 50%;
             width: 50%;
         }
+
+        .desc p {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: teal;
+        }
+
+        .child > p {
+            font-style: oblique;
+            background-color: teal;
+        }
+
+        .next + p {
+            background-color: teal;
+        }
+
+        .subseq ~ p {
+            background-color: teal;
+        }
+
         li {
             margin-top: 10px;
         }
+
         #internal {
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, 'Arial Narrow', Arial, sans-serif;
         }
+
         #firstCap::first-letter {
             text-transform: capitalize;
         }
@@ -74,7 +106,9 @@
 
 <body>
     <button id="fixedBtn">
-        <a href="index.html" style="color: var(--primary-color); text-decoration: none; z-index: 1; font-size: large; font-weight: bold;"><i class="fas fa-home"></i>&nbsp; HOME</a>
+        <a href="index.html"
+            style="color: var(--primary-color); text-decoration: none; z-index: 1; font-size: large; font-weight: bold;"><i
+                class="fas fa-home"></i>&nbsp; HOME</a>
     </button>
     </div>
     <section id="syntax">
@@ -153,8 +187,10 @@
             <li>Using rgb like : <b style="color: rgb(200,0,0);">RED : 200, GREEN : 0, BLUE : 0</b></li>
             <li>Using rgba like : <b style="color: rgba(0, 0, 250, 0.5);">RED : 0, GREEN : 0, BLUE : 250, ALPHA
                     (OPACITY) : 0.5</b></li>
-            <li>Using hex values like : <b style="color: var(--secondary-color);">var(--secondary-color) - ff:MAX 00:MIN</b></li>
-            <li>Using hexa values like : <b style="color: var(--secondary-color)79;">#ff - RED MAX, 00 - BLUE GREEN 0, Opacity 80%</b>
+            <li>Using hex values like : <b style="color: var(--secondary-color);">var(--secondary-color) - ff:MAX
+                    00:MIN</b></li>
+            <li>Using hexa values like : <b style="color: var(--secondary-color)79;">#ff - RED MAX, 00 - BLUE GREEN 0,
+                    Opacity 80%</b>
             </li>
             <li>Using hsl values like : <b style="color: hsl(180, 50%, 20%);">HUE : 180 <sup><small>o</small></sup>,
                     SATURATION : 50%, LIGHTNESS : 20%</b></li>
@@ -196,46 +232,64 @@
     <hr>
     <section id="borders">
         <h1>Borders</h1>
-        <div style="border: 2px solid var(--secondary-color); margin-top: 10px; color:unset">Border 2px Solid Black</div>
-        <div style="border: 2px dotted var(--secondary-color); margin-top: 10px; color:unset">Border 2px Dotted Black</div>
-        <div style="border: 2.5px dashed var(--secondary-color); margin-top: 10px; color:unset">Border 2px Dashed Black</div>
+        <div style="border: 2px solid var(--secondary-color); margin-top: 10px; color:unset">Border 2px Solid Black
+        </div>
+        <div style="border: 2px dotted var(--secondary-color); margin-top: 10px; color:unset">Border 2px Dotted Black
+        </div>
+        <div style="border: 2.5px dashed var(--secondary-color); margin-top: 10px; color:unset">Border 2px Dashed Black
+        </div>
         <div style="border: 5px solid; border-color: red blue; height: 100px; margin-top: 10px;">Border 2px Solid Red &
             Blue</div>
         <div style="border: 5px solid; border-color: red green blue yellow; height: 100px; margin-top: 10px;">Border 2px
             Solid Red, Green, Blue, Yellow</div>
-        <div style="border: 5px solid; border-color: var(--secondary-color); border-radius: 20px; height: 100px; margin-top: 10px;">
+        <div
+            style="border: 5px solid; border-color: var(--secondary-color); border-radius: 20px; height: 100px; margin-top: 10px;">
             Rounded Corners Using Border Radius 20px</div>
     </section>
     <hr>
     <section id="margin">
         <h1>Margins</h1>
-        <div style="margin: 40px; border: 2px solid var(--secondary-color); height: 50px; width: 200px;">Full Margin 20px</div>
-        <div style="margin-top: 20px; border: 2px solid var(--secondary-color); height: 50px; width: 200px;">Top Margin 20px</div>
-        <div style="margin-right: 20px; border: 2px solid var(--secondary-color); height: 50px; width: 200px;">Right Margin 20px</div>
-        <div style="margin-bottom: 20px; border: 2px solid var(--secondary-color); height: 50px; width: 200px;">Bottom Margin 20px</div>
-        <div style="margin-left: 20px; border: 2px solid var(--secondary-color); height: 50px; width: 200px;">Left Margin 20px</div>
-        <div style="margin: 20px 40px; border: 2px solid var(--secondary-color); height: 50px; width: 200px;">Top & Bottom Margin 20px,
+        <div style="margin: 40px; border: 2px solid var(--secondary-color); height: 50px; width: 200px;">Full Margin
+            20px</div>
+        <div style="margin-top: 20px; border: 2px solid var(--secondary-color); height: 50px; width: 200px;">Top Margin
+            20px</div>
+        <div style="margin-right: 20px; border: 2px solid var(--secondary-color); height: 50px; width: 200px;">Right
+            Margin 20px</div>
+        <div style="margin-bottom: 20px; border: 2px solid var(--secondary-color); height: 50px; width: 200px;">Bottom
+            Margin 20px</div>
+        <div style="margin-left: 20px; border: 2px solid var(--secondary-color); height: 50px; width: 200px;">Left
+            Margin 20px</div>
+        <div style="margin: 20px 40px; border: 2px solid var(--secondary-color); height: 50px; width: 200px;">Top &
+            Bottom Margin 20px,
             Left & Right Margin 40px</div>
-        <div style="margin: 10px 20px 30px 40px; border: 2px solid var(--secondary-color); height: 50px; width: 200px;">Top 10px, Right
+        <div style="margin: 10px 20px 30px 40px; border: 2px solid var(--secondary-color); height: 50px; width: 200px;">
+            Top 10px, Right
             20px, Bottom 30px, Left 40px</div>
     </section>
     <hr>
     <section id="padding">
         <h1>Padding</h1>
-        <div style="padding: 50px; border: 2px solid var(--secondary-color); margin-top: 20px;">This content is 50px fully padded. <br>
+        <div style="padding: 50px; border: 2px solid var(--secondary-color); margin-top: 20px;">This content is 50px
+            fully padded. <br>
             <h5>New Line</h5>
         </div>
-        <div style="padding-top: 50px; border: 2px solid var(--secondary-color); margin-top: 20px;">This content is 50px top padded.
+        <div style="padding-top: 50px; border: 2px solid var(--secondary-color); margin-top: 20px;">This content is 50px
+            top padded.
         </div>
-        <div style="padding-right: 50px; border: 2px solid var(--secondary-color); margin-top: 20px;">This content is 50px right padded.
+        <div style="padding-right: 50px; border: 2px solid var(--secondary-color); margin-top: 20px;">This content is
+            50px right padded.
         </div>
-        <div style="padding-left: 50px; border: 2px solid var(--secondary-color); margin-top: 20px;">This content is 50px left padded.
+        <div style="padding-left: 50px; border: 2px solid var(--secondary-color); margin-top: 20px;">This content is
+            50px left padded.
         </div>
-        <div style="padding-bottom: 50px; border: 2px solid var(--secondary-color); margin-top: 20px;">This content is 50px bottom
+        <div style="padding-bottom: 50px; border: 2px solid var(--secondary-color); margin-top: 20px;">This content is
+            50px bottom
             padded.</div>
-        <div style="padding : 50px 80px; border: 2px solid var(--secondary-color); margin-top: 20px;">This content is 50px top-bottom
+        <div style="padding : 50px 80px; border: 2px solid var(--secondary-color); margin-top: 20px;">This content is
+            50px top-bottom
             padded & 80px left-right padded.</div>
-        <div style="padding : 40px 50px 60px 70px;  border: 2px solid var(--secondary-color); margin-top: 20px;">This content is top
+        <div style="padding : 40px 50px 60px 70px;  border: 2px solid var(--secondary-color); margin-top: 20px;">This
+            content is top
             40px, right 50px, bottom 60px, and left 70px padded.</div>
     </section>
     <hr>
@@ -245,9 +299,11 @@
         <div style="height: 100%; border: 2px solid var(--secondary-color);">This div has height of 100%</div>
         <div style="height: 10rem; border: 2px solid var(--secondary-color);">This div has height of 10rem</div>
         <div style="height: 10cm; border: 2px solid var(--secondary-color);">This div has height of 10cm</div>
-        <div style="min-height: 100px; height: 50px; border: 2px solid var(--secondary-color);">This div has min-height of 100px given
+        <div style="min-height: 100px; height: 50px; border: 2px solid var(--secondary-color);">This div has min-height
+            of 100px given
             50px prevents smaller than 100px.</div>
-        <div style="max-height: 100px; height: 150px; border: 2px solid var(--secondary-color);">This div has max-height of 100px given
+        <div style="max-height: 100px; height: 150px; border: 2px solid var(--secondary-color);">This div has max-height
+            of 100px given
             150px prevents bigger than 100px.</div>
     </section>
     <hr>
@@ -257,15 +313,18 @@
         <div style="width: 100%; border: 2px solid var(--secondary-color);">This div has width of 100%</div>
         <div style="width: 10rem; border: 2px solid var(--secondary-color);">This div has width of 10rem</div>
         <div style="width: 10cm; border: 2px solid var(--secondary-color);">This div has width of 10cm</div>
-        <div style="min-width: 200px; width: 50px; border: 2px solid var(--secondary-color);">This div has min-width of 200px given 50px
+        <div style="min-width: 200px; width: 50px; border: 2px solid var(--secondary-color);">This div has min-width of
+            200px given 50px
             prevents smaller than 200px.</div>
-        <div style="max-width: 200px; width: 250px; border: 2px solid var(--secondary-color);">This div has max-width of 200px given
+        <div style="max-width: 200px; width: 250px; border: 2px solid var(--secondary-color);">This div has max-width of
+            200px given
             250px prevents bigger than 200px.</div>
     </section>
     <hr>
     <section id="box">
         <h1>Box Model</h1>
-        <div style="height: 200px; width: 200px; border: 10px solid var(--secondary-color); margin: 60px; padding: 50px;">
+        <div
+            style="height: 200px; width: 200px; border: 10px solid var(--secondary-color); margin: 60px; padding: 50px;">
             <h3>Calculation for CSS Box Model</h3>
         </div>
         <p>Given width = 200px, height = 200px, border = 10px, margin = 60px, padding = 50px</p>
@@ -309,7 +368,8 @@
     <section id="text">
         <h1>Text</h1>
         <ul>
-            <li>color : <span style="color: var(--secondary-color);">Color of this text has been changed to red.</span></li>
+            <li>color : <span style="color: var(--secondary-color);">Color of this text has been changed to red.</span>
+            </li>
             <li>alignment : <span>You can align text wherever you want like : </span></li>
             <p class="bd" style="text-align: start;">Text-START</p>
             <p class="bd" style="text-align: center;">Text-CENTER</p>
@@ -385,7 +445,9 @@
     <hr>
     <section id="fonts">
         <h1>Fonts</h1>
-        <p style="font-family: myCustomFont;"> <mark>Custom Fonts Downloaded and Imported</mark> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt error pariatur excepturi dolorem labore ipsam consequatur adipisci accusantium, quam, doloremque asperiores, vitae dolorum commodi? </p>
+        <p style="font-family: myCustomFont;"> <mark>Custom Fonts Downloaded and Imported</mark> Lorem ipsum dolor sit,
+            amet consectetur adipisicing elit. Nesciunt error pariatur excepturi dolorem labore ipsam consequatur
+            adipisci accusantium, quam, doloremque asperiores, vitae dolorum commodi? </p>
         <p style="font-family: 'Times New Roman', Times, serif;">This is Times New Roman sans serif fonts.</p>
         <p style="font-family: 'Courier New', Courier, monospace">This is Courier New fonts.</p>
         <p style="font-family: 'Lucida Sans';">This is Lucida Console fonts.</p>
@@ -452,7 +514,8 @@
     <section id="lists">
         <h1>Lists</h1>
         <ul>
-            <li>List Style Types : lower-alpha, uppper-alpha, lower-roman, upper-roman, circle, square, decimal, decimal-leading-zero etc.</li>
+            <li>List Style Types : lower-alpha, uppper-alpha, lower-roman, upper-roman, circle, square, decimal,
+                decimal-leading-zero etc.</li>
             <li>List Style Position : Inside or Outside.</li>
             <ul style="list-style-type:  lower-alpha; list-style-position: outside;">
                 <li class="bd">Coffee</li>
@@ -508,12 +571,223 @@
             <li>border-spacing : To put spacing between cells of table.</li>
             <li>text-align : Left, Center, Middle aligned text content of table cells.</li>
             <li>vertical-align : Top, Middle, Bottom aligned text content of table cells.</li>
-            <li>overflow : If the content of table is too wide and long then you can control it by scroll, hidden, visible, auto.</li>
-            <li>overflow-x : If the content of table is too wide then you can control it by scroll, hidden, visible, auto.</li>
-            <li>overflow-y : If the content of table is too long then you can control it by scroll, hidden, visible, auto.</li>
+            <li>overflow : If the content of table is too wide and long then you can control it by scroll, hidden,
+                visible, auto.</li>
+            <li>overflow-x : If the content of table is too wide then you can control it by scroll, hidden, visible,
+                auto.</li>
+            <li>overflow-y : If the content of table is too long then you can control it by scroll, hidden, visible,
+                auto.</li>
             <li>:hover - Pseudo element can be used to make table more interactive.</li>
-            <li>:nth-child(n/odd/even) - It can be applied on table to differ row style from each other that can enhance readability of table.</li>
+            <li>:nth-child(n/odd/even) - It can be applied on table to differ row style from each other that can enhance
+                readability of table.</li>
         </ul>
+    </section>
+    <hr>
+    <section id="overflow">
+        <h1>Overflow</h1>
+        <h3>Overflow : Visible</h3>
+        <div class="bd"
+            style="height: 100px; width: 200px; overflow : visible; margin-top: 80px; background-color: teal;">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing
+            elit. Temporibus, cupiditate.
+        </div>
+        <h3 style="margin-top: 50px;">Overflow : Hidden</h3>
+        <div class="bd" style="height: 100px; width: 200px; overflow : hidden; background-color: teal;">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing
+            elit. Temporibus, cupiditate.
+        </div>
+        <h3 style="margin-top: 50px;">Overflow : Scroll</h3>
+        <div class="bd"
+            style="display: block; padding: 10px; height: 100px; width: 200px; overflow : scroll; background-color: teal;">
+            <pre>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis et voluptatum aspernatur illum suscipit esse repudiandae! Iure, assumenda, nihil ad veniam eius minima perferendis perspiciatis dicta sunt illum saepe error nemo vel id possimus? Ex excepturi nihil facilis iste molestias consectetur voluptas eos id incidunt quibusdam,<br> debitis tempore accusamus pariatur sint magni perspiciatis adipisci fugit blanditiis quam eaque? Aut deserunt cupiditate quidem fugiat fuga. Perferendis at eveniet <br>rem laborum quasi sit vel, velit deserunt enim mollitia consequuntur modi tenetur molestiae omnis atque quaerat blanditiis, neque quidem doloribus ex vitae facilis <br>earum nisi? Perferendis consectetur culpa accusantium, cumque provident quod assumenda eligendi nobis mollitia quae consequuntur autem, error optio voluptatem. Aut hic ducimus quis, accusamus odio reprehenderit quas est voluptates aliquam cum nesciunt eius non commodi doloribus aspernatur iusto quod quibusdam, voluptas dolore ut<br> quo, dolor facere molestiae. Dolorum tenetur, architecto porro quibusdam, quam repellat error commodi in similique saepe suscipit ipsam officiis. At eveniet neque <br>numquam accusantium cum inventore? Eveniet sequi doloribus quia, ipsam deleniti exercitationem quas odio veniam repellat! Quod quibusdam ducimus fugiat excepturi. <br>Recusandae vel hic deleniti aut, ut odio porro deserunt eos dolorem ipsam molestiae eveniet dolores saepe beatae consectetur, debitis, repellat consequuntur ad? Et, minus distinctio?
+            </pre>
+        </div>
+        <h3 style="margin-top: 50px;">Overflow : Auto</h3>
+        <div class="bd" style="display: block; height: 100px; width: 200px; overflow: auto;">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        </div>
+        <p>The auto value is similar to scroll, but it adds scrollbars only when necessary:</p>
+        <div class="bd" style="display: block; height: 100px; width: 200px; overflow: auto;">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga ex expedita doloribus inventore similique
+            quod ad eaque iste aspernatur facere harum, labore dolore at, explicabo molestiae repellendus ea vel
+            exercitationem, facilis dicta consequatur debitis eligendi fugit. Optio eligendi recusandae nihil cum
+            praesentium numquam repellendus quisquam provident ex tenetur suscipit dicta nam molestiae sequi ab totam
+            repudiandae sed, laudantium laboriosam. Veritatis incidunt rem ab aliquid quaerat atque, placeat saepe
+            aperiam similique delectus, ad non. Corrupti minima reiciendis culpa obcaecati harum maiores inventore
+            voluptate dicta exercitationem id. Eveniet obcaecati reiciendis laudantium quia deserunt eligendi, illo vero
+            nam sapiente porro, sed est distinctio.
+        </div>
+    </section>
+    <hr>
+    <section id="overflow-x">
+        <h1>Overflow-X</h1>
+        <h3 style="margin-top: 50px;">Overflow-X : Auto</h3>
+        <div class="bd" style="height: 100px; width: 200px; overflow-x: auto;">
+            <nobr>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, quam facilis, placeat iure
+                doloremque nesciunt labore odio repellendus corrupti necessitatibus earum nihil ex harum nemo delectus
+                corporis cumque aperiam nisi vel optio. Necessitatibus deserunt obcaecati dicta distinctio quas esse!
+                Maxime enim architecto aut modi hic sunt quis voluptas, cum quisquam explicabo dolore voluptates numquam
+                repellendus eius. Ea quae error voluptates laudantium numquam. Facere praesentium repellat voluptatem.
+                Veniam exercitationem non sapiente maiores eum aliquid placeat quae corrupti eius illo dolorum impedit
+                ullam aspernatur, repellat cum hic ipsa ipsum quo! Debitis, itaque nulla modi tempore quia eaque natus
+                vel soluta iusto voluptates?
+            </nobr>
+        </div>
+        <h3 style="margin-top: 50px;">Overflow-X : Visible</h3>
+        <div class="bd" style="display: block; height: 100px; width: 200px; overflow-x: visible;">
+            <nobr>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, quam facilis, placeat iure
+                doloremque nesciunt
+            </nobr>
+        </div>
+        <h3 style="margin-top: 50px;">Overflow-X : hidden</h3>
+        <div class="bd" style="height: 100px; width: 200px; overflow-x: hidden;">
+            <nobr>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, quam facilis, placeat iure
+                doloremque nesciunt labore odio repellendus corrupti necessitatibus earum nihil ex harum nemo delectus
+                corporis cumque aperiam nisi vel optio. Necessitatibus deserunt obcaecati dicta distinctio quas esse!
+                Maxime enim architecto aut modi hic sunt quis voluptas, cum quisquam explicabo dolore voluptates numquam
+                repellendus eius. Ea quae error voluptates laudantium numquam. Facere praesentium repellat voluptatem.
+                Veniam exercitationem non sapiente maiores eum aliquid placeat quae corrupti eius illo dolorum impedit
+                ullam aspernatur, repellat cum hic ipsa ipsum quo! Debitis, itaque nulla modi tempore quia eaque natus
+                vel soluta iusto voluptates?
+            </nobr>
+        </div>
+        <h3 style="margin-top: 50px;">Overflow-X : scroll</h3>
+        <div class="bd" style="height: 100px; width: 200px; overflow-x: scroll;">
+            <nobr>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, quam facilis, placeat iure
+                doloremque nesciunt labore odio repellendus corrupti necessitatibus earum nihil ex harum nemo delectus
+                corporis cumque aperiam nisi vel optio. Necessitatibus deserunt obcaecati dicta distinctio quas esse!
+                Maxime enim architecto aut modi hic sunt quis voluptas, cum quisquam explicabo dolore voluptates numquam
+                repellendus eius. Ea quae error voluptates laudantium numquam. Facere praesentium repellat voluptatem.
+                Veniam exercitationem non sapiente maiores eum aliquid placeat quae corrupti eius illo dolorum impedit
+                ullam aspernatur, repellat cum hic ipsa ipsum quo! Debitis, itaque nulla modi tempore quia eaque natus
+                vel soluta iusto voluptates?
+            </nobr>
+        </div>
+    </section>
+    <hr>
+    <section id="overflow-y">
+        <h1>Overflow-Y</h1>
+        <h3 style="margin-top: 50px;">Overflow-Y : auto</h3>
+        <div class="bd" style="display: block; height: 100px; width: 200px; overflow-y: auto;">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, quam facilis, placeat iure doloremque
+            nesciunt labore odio repellendus corrupti necessitatibus earum nihil ex harum nemo delectus corporis cumque
+            aperiam nisi vel optio. Necessitatibus deserunt obcaecati dicta distinctio quas esse! Maxime enim architecto
+            aut modi hic sunt quis voluptas, cum quisquam explicabo dolore voluptates numquam repellendus eius. Ea quae
+            error voluptates laudantium numquam. Facere praesentium repellat voluptatem. Veniam exercitationem non
+            sapiente maiores eum aliquid placeat quae corrupti eius illo dolorum impedit ullam aspernatur, repellat cum
+            hic ipsa ipsum quo! Debitis, itaque nulla modi tempore quia eaque natus vel soluta iusto voluptates?
+        </div>
+        <h3 style="margin-top: 50px;">Overflow-Y : visible</h3>
+        <div class="bd" style="height: 100px; width: 200px; overflow-y: visible;">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, quam facilis, placeat iure doloremque
+        </div>
+        <h3 style="margin-top: 50px;">Overflow-Y : hidden</h3>
+        <div class="bd" style="display: block; height: 100px; width: 200px; overflow-y: hidden;">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, quam facilis, placeat iure doloremque
+            nesciunt labore odio repellendus corrupti necessitatibus earum nihil ex harum nemo delectus corporis cumque
+            aperiam nisi vel optio. Necessitatibus deserunt obcaecati dicta distinctio quas esse! Maxime enim architecto
+            aut modi hic sunt quis voluptas, cum quisquam explicabo dolore voluptates numquam repellendus eius. Ea quae
+            error voluptates laudantium numquam. Facere praesentium repellat voluptatem. Veniam exercitationem non
+            sapiente maiores eum aliquid placeat quae corrupti eius illo dolorum impedit ullam aspernatur, repellat cum
+            hic ipsa ipsum quo! Debitis, itaque nulla modi tempore quia eaque natus vel soluta iusto voluptates?
+        </div>
+        <h3 style="margin-top: 50px;">Overflow-Y : scroll</h3>
+        <div class="bd" style="display: block; height: 100px; width: 200px; overflow-y: scroll;">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, quam facilis, placeat iure doloremque
+            nesciunt labore odio repellendus corrupti necessitatibus earum nihil ex harum nemo delectus corporis cumque
+            aperiam nisi vel optio. Necessitatibus deserunt obcaecati dicta distinctio quas esse! Maxime enim architecto
+            aut modi hic sunt quis voluptas, cum quisquam explicabo dolore voluptates numquam repellendus eius. Ea quae
+            error voluptates laudantium numquam. Facere praesentium repellat voluptatem. Veniam exercitationem non
+            sapiente maiores eum aliquid placeat quae corrupti eius illo dolorum impedit ullam aspernatur, repellat cum
+            hic ipsa ipsum quo! Debitis, itaque nulla modi tempore quia eaque natus vel soluta iusto voluptates?
+        </div>
+    </section>
+    <hr>
+    <section id="float">
+        <h1>Float</h1>
+        <div style="display: block;">
+            <h3>Default without Float Property</h3>
+            <div style="display: block;" class="bd">
+                <img src="img/small.jpg" alt="small">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam possimus earum nulla iusto sapiente
+                    in doloribus excepturi blanditiis itaque unde alias, accusantium quaerat ullam quas laudantium
+                    corrupti quia quo eaque numquam ea pariatur labore. Ratione officiis odio tenetur quod nemo.
+                    Blanditiis illo corporis laudantium nam, laboriosam esse officiis aliquam debitis?</p>
+            </div>
+            <h3>Float : None (Works As Default)</h3>
+            <div style="display: block;" class="bd">
+                <img src="img/small.jpg" alt="small" style="float: none;">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam possimus earum nulla iusto sapiente
+                    in doloribus excepturi blanditiis itaque unde alias, accusantium quaerat ullam quas laudantium
+                    corrupti quia quo eaque numquam ea pariatur labore. Ratione officiis odio tenetur quod nemo.
+                    Blanditiis illo corporis laudantium nam, laboriosam esse officiis aliquam debitis?</p>
+            </div>
+            <h3>Float : Left</h3>
+            <div style="display: block; float: left;" class="bd">
+                <img src="img/small.jpg" alt="small" style="float: left;">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam possimus earum nulla iusto sapiente
+                    in doloribus excepturi blanditiis itaque unde alias, accusantium quaerat ullam quas laudantium
+                    corrupti quia quo eaque numquam ea pariatur labore. Ratione officiis odio tenetur quod nemo.
+                    Blanditiis illo corporis laudantium nam, laboriosam esse officiis aliquam debitis?</p>
+            </div>
+            <h3>Float : Right</h3>
+            <div style="display: block; float: right;" class="bd">
+                <img src="img/small.jpg" alt="small" style="float: right;">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam possimus earum nulla iusto sapiente
+                    in doloribus excepturi blanditiis itaque unde alias, accusantium quaerat ullam quas laudantium
+                    corrupti quia quo eaque numquam ea pariatur labore. Ratione officiis odio tenetur quod nemo.
+                    Blanditiis illo corporis laudantium nam, laboriosam esse officiis aliquam debitis?</p>
+            </div>
+            <h3>Float : inherit</h3>
+            <div style="display: block; float: left;" class="bd">
+                <img src="img/small.jpg" alt="small" style="float: inherit;">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam possimus earum nulla iusto sapiente
+                    in doloribus excepturi blanditiis itaque unde alias, accusantium quaerat ullam quas laudantium
+                    corrupti quia quo eaque numquam ea pariatur labore. Ratione officiis odio tenetur quod nemo.
+                    Blanditiis illo corporis laudantium nam, laboriosam esse officiis aliquam debitis?</p>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section id="combinators">
+        <h1>Combinators</h1>
+        <h3>Descendant Combinator (space) - selects all descendants of element.</h3>
+        <div style="display: block;" class="desc">
+            <p>Direct Child<br>
+                <section>
+                    <p>Nested Child</p>
+                </section>
+            </p>
+            <br>
+        </div>
+        <h3>Child Combinator ( > ) - selects only direct child elements not nested.</h3>
+        <div class="child" style="display: block;">
+            <p>Direct Child<br>
+                <section>
+                    <p>Nested Child</p>
+                </section>
+            </p>
+            <br>
+        </div>
+        <h3>Next Sibling ( + ) - selects only next immediate element not nested.</h3>
+        <div class="next" style="display: block;">
+        </div>
+        <p>Direct Child<br>
+            <p>Nested Child</p>
+        </p>
+        <br>
+        <h3>Subsequent Sibling ( ~ ) - selects all next elements which also includes nested.</h3>
+        <div class="subseq" style="display: block;">
+        </div>
+        <p>Direct Child<br>
+            <p>Nested Child</p>
+        </p>
+        <br>
     </section>
 </body>
 

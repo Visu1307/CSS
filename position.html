@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome-icons/css/all.min.css">
+    <style>
+        html {
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, 'Arial Narrow', Arial, sans-serif, Courier, monospace;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            padding: 10px;
+            border-radius: 20px;
+            background-color: var(--secondary-color);
+            text-align: center;
+        }
+
+        div {
+            background-color: teal;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="fixedBtn">
+        <a href="index.html"
+            style="color: var(--primary-color); text-decoration: none; z-index: 1; font-size: medium; font-weight: bold;"><i
+                class="fas fa-home" style="color: var(--primary-color);"></i>&nbsp;HOME</a>
+    </button>
+    <header style="background-color: var(--secondary-color); border-radius: 10px; color: var(--primary-color);">
+        <h1 style="text-align: center; margin: 0; padding: 10px;">CSS Position</h1>
+    </header>
+    <p>CSS positioning is about controlling the placement of elements within a web page.</p>
+    <p>With CSS positioning, you can override the normal document flow.</p>
+    <h3 id="static">Position : Static (Default)</h3>
+    <div class="bd" style="position: static;">
+        <p>Hello World</p>
+    </div>
+    <h3 id="relative">Position : Relative, Left : 30px, Top : 30px</h3>
+    <div class="bd" style="position: relative; left: 30px; top: 30px;">
+        <p>Hello World</p>
+    </div>
+    <h3>Position : Relative, Right : 30px, Bottom : 30px</h3>
+    <div class="bd" style="position: relative; right: 30px; bottom: 30px;">
+        <p>Hello World</p>
+    </div>
+    <h3>Position : Relative, Left : 30px, Right : 30px (WON'T WORK), Top : 30px, Bottom : 30px (WON'T WORK)</h3>
+    <div class="bd" style="position: relative; left: 30px; right: 30px; top: 30px; bottom: 30px;">
+        <p>Hello World</p>
+    </div>
+    <h3 id="absolute" style="margin-top: 50px;">Position : Absolute, Left : 50px, Top : 20px</h3>
+    <div class="bd" style="position: relative; height: 100px;">
+        <div class="bd"
+            style="border: 2px solid var(--secondary-color); height: 30px; width: 30px; position: absolute; left: 50px; top: 20px;">
+        </div>
+    </div>
+    <h3 style="margin-top: 50px;">Position : Absolute, Right : 150px, Bottom : 20px</h3>
+    <div class="bd" style="position: relative; height: 100px;">
+        <div class="bd"
+            style="border: 2px solid var(--secondary-color); height: 30px; width: 30px; position: absolute; right: 150px; bottom: 20px;">
+        </div>
+    </div>
+    <p>Note : It only works when parent's position is other than static. It can also overlap other elements.</p>
+    <div style="position: relative;">
+        <img src="img/large.jpg" height="500px" width="100%" alt="">
+        <div style="position: absolute; top: 10px; left: 10px;">Top Left</div>
+        <div style="position: absolute; top: 10px; right: 10px;">Top Right</div>
+        <div style="position: absolute; bottom: 10px; left: 10px;">Bottom Left</div>
+        <div style="position: absolute; bottom: 10px; right: 10px;">Bottom Right</div>
+        <div style="position: absolute; left: 50%; top: 50%; right: 50%; bottom: 50%;">Centered</div>
+    </div>
+    <h3 id="sticky" style="margin-top: 50px;">Position : Sticky, Top : 10px</h3>
+    <div class="bd" style="display: block; overflow-y: scroll; height: 200px;">
+        <b>Try to scroll this container.</b>
+        <div
+            style="position: sticky; top: 10px; background-color: var(--secondary-color); color: var(--primary-color);">
+            I am sticky element</div>
+        <div style="padding-bottom: 1000px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum esse magnam
+            ab corporis iusto deleniti quis eaque quidem fugit laboriosam dolores, voluptatibus architecto suscipit
+            cupiditate assumenda dolore consequatur ut doloribus, quaerat minus. Eos sequi facere asperiores est
+            accusamus iure voluptas ullam nobis similique mollitia, laborum qui praesentium ut enim consequatur debitis.
+            Quibusdam praesentium exercitationem voluptate totam aperiam molestiae aliquam maiores, dolor labore id quod
+            molestias. Sunt quidem at, corrupti voluptatum consequatur ipsum nulla excepturi quasi autem commodi
+            molestiae, nostrum quam totam. Distinctio perspiciatis magni soluta fugit delectus adipisci reprehenderit
+            alias at laborum consequatur dolor harum ipsam, accusamus, dolorem in fugiat eum quasi ex vel nostrum
+            maiores ad? Animi provident aspernatur dicta! Omnis doloribus architecto, recusandae doloremque alias sit
+            reiciendis, aliquam iusto commodi distinctio itaque ea tenetur voluptatum iure atque fuga ducimus, tempore
+            ut ipsam eius obcaecati explicabo? Magni, quia quos sequi maiores provident fuga ipsum tempora nihil
+            facilis, nemo autem neque eaque consectetur aperiam est ipsam minima animi fugiat. Distinctio, nam provident
+            alias, asperiores repellat repudiandae soluta nisi fugiat dolor possimus quisquam voluptatem eveniet ab
+            doloribus debitis architecto quo odio explicabo eaque facere cum! Aliquid sed dolore autem tempore eum iure
+            magni atque doloremque reiciendis suscipit. In eligendi veritatis molestias!</div>
+    </div>
+    <h3 id="z-index" style="margin-top: 50px;">Z-Index 1, 2, 3 given inside relative container, Absolute positions are used for elements to overlap.</h3>
+    <div class="bd" style="display: block; position: relative; padding-top: 250px;">
+        <div style="position: absolute; left: 10px; top: 10px; background-color: red; z-index: 1; height: 200px; width: 200px;">
+            <div style="position: absolute; right: 10px; bottom: 10px;">z-index: 1</div>
+        </div>
+        <div style="position: absolute; left: 10px; top: 10px; background-color: green; z-index: 2; height: 150px; width: 150px;">
+            <div style="position: absolute; right: 10px; bottom: 10px;">z-index: 2</div>
+        </div>
+        <div style="position: absolute; left: 10px; top: 10px; background-color: blue; z-index: 2; height: 100px; width: 100px;">
+            z-index: 3
+        </div>
+    </div>
+</body>
+
+</html>
