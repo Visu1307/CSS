@@ -64,3 +64,74 @@ th,td:hover{
     background-color: #EBF4F6;
     color: #088395;
 }
+
+.hover{
+    height: 100px;
+}
+.hover:hover{
+    color: black;
+    background-color: yellow;
+}
+
+.focus{
+    height: 50px;
+    font-size: larger;
+    border-radius: 20px;
+}
+
+.focus:focus{
+    background-color: yellow;
+}
+
+
+
+.structural-demo :first-child{
+    color: red;
+}
+
+.structural-demo li:last-child{
+    color: yellow;
+}
+
+.structural-demo li:nth-child(2){
+    color: blue;
+}
+
+.structural-demo li:nth-last-child(2){
+    color: violet;
+}
+
+.after_demo::after{
+    content: "Hello World";
+    color: black;
+    background-color: yellow;
+    width: 100%;
+    text-align: center;
+}
+
+.before_demo{
+    display: block;
+    margin-top: 20px;
+}
+
+.before_demo::before{
+    content: "Hello World";
+    background-color: yellow;
+    color: black;
+    width: 100%;
+    display: block;
+}
+
+.first_demo::first-letter{
+    background-color: red;
+    font-size: xx-large;
+}
+
+.first_demo::first-line{
+    background-color: blue;
+}
+
+.select_me::selection{
+    background-color: yellow;
+    color: black;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid - Use it for 2D layouts</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: auto 15%;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas: 'header header' 'main sidebar' 'footer footer';
+            gap: 20px;
+        }
+
+        .head {
+            grid-area: header;
+            background-color: gray;
+            border-radius: 20px;
+
+            ul {
+                margin-left: 20px;
+                display: flex;
+                list-style-type: none;
+                column-gap: 20px;
+                color: white;
+                padding: 10px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 500;
+            }
+        }
+
+        .side {
+            grid-area: sidebar;
+            background-color: gray;
+            color: white;
+            border-radius: 20px;
+        }
+        .main {
+            grid-area: main;
+            margin-left: 20px;
+        }
+        .foot{
+            grid-area: footer;
+            background-color: gray;
+            color: white;
+            border-radius: 20px;
+            p{
+                margin-top: 8px;
+                text-align: center;
+            }
+        }
+        .inContain{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .card{
+            background-color: gray;
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+            padding: 1.5rem;
+        }
+        @media screen and (max-width : 700px) {
+
+            .container{
+                grid-template-columns: auto;
+            }
+
+            .side{
+                display: none;
+            }
+        }
+
+        @media screen and (max-width : 400px) {
+            .inContain{
+                grid-template-columns: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>CSS Grid - Use it for 2D layouts</h1>
+    </center>
+    <div class="container">
+        <div class="head">
+            <ul>
+                <li>Home</li>
+                <li>Contact Us</li>
+                <li>About Us</li>
+            </ul>
+        </div>
+        <div class="side">
+            <ul>
+                Recent Posts
+                <li>Post-1</li>
+                <li>Post-2</li>
+                <li>Post-3</li>
+            </ul>
+        </div>
+        <div class="main">
+            <h1>This is main content.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora ipsa placeat totam fuga, repudiandae
+                ullam! Qui esse et temporibus voluptates tempore minus libero sequi maxime ratione quos itaque aut
+                cupiditate quae hic nulla voluptatem impedit maiores, similique a quo. Minima quisquam molestias sequi
+                labore dignissimos aliquid, ratione officiis! Aperiam molestias maxime eum ex voluptatibus accusamus
+                voluptas? Consectetur, dolorem quasi. Incidunt sint reprehenderit vero laboriosam est perferendis
+                aspernatur corrupti dolorem laudantium minima. Natus ipsam debitis ad nemo error voluptatem quidem
+                dolorem assumenda laborum quos, pariatur sapiente! Est laborum natus consequatur. Commodi quibusdam
+                assumenda quisquam nemo non cum, temporibus ab inventore voluptas.</p>
+            <div class="inContain">
+                <div class="card">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet optio cupiditate accusamus sed, ab ullam rem tempora iste minus veritatis labore at, asperiores consectetur quia et earum natus accusantium enim exercitationem omnis id cum possimus! Esse in dolorem, facere eos doloribus, debitis sequi hic quidem fuga neque quisquam nihil officiis!</div>
+                <div class="card">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet optio cupiditate accusamus sed, ab ullam rem tempora iste minus veritatis labore at, asperiores consectetur quia et earum natus accusantium enim exercitationem omnis id cum possimus! Esse in dolorem, facere eos doloribus, debitis sequi hic quidem fuga neque quisquam nihil officiis!</div>
+                <div class="card">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet optio cupiditate accusamus sed, ab ullam rem tempora iste minus veritatis labore at, asperiores consectetur quia et earum natus accusantium enim exercitationem omnis id cum possimus! Esse in dolorem, facere eos doloribus, debitis sequi hic quidem fuga neque quisquam nihil officiis!</div>
+                <div class="card">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet optio cupiditate accusamus sed, ab ullam rem tempora iste minus veritatis labore at, asperiores consectetur quia et earum natus accusantium enim exercitationem omnis id cum possimus! Esse in dolorem, facere eos doloribus, debitis sequi hic quidem fuga neque quisquam nihil officiis!</div>
+            </div>
+        </div>
+        <div class="foot">
+            <p>Practicing Grid & Creating Demo for it.</p>
+        </div>
+    </div>
+</body>
+
+</html>
