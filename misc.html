@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miscellenous Tags</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome-icons/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #088395;
+            --secondary-color: #EBF4F6;
+        }
+
+        html {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        h1 {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            text-align: center;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        div{
+            text-align: center;
+            background-color: teal;
+        }
+        hr{
+            margin: 50px 0 50px 0;
+        }
+        #fixedBtn {
+            background-color: var(--secondary-color);
+            width: 120px;
+            padding: 10px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            border-radius: 20px;
+            opacity: 0.8;
+            border: 5px solid var(--secondary-color);
+        }
+        .container{
+            background-color: teal;
+        }
+        mark{
+            color: var(--primary-color);
+            background-color: var(--secondary-color);
+        }
+        .bd {
+            border: 2px solid #EBF4F6;
+        }
+
+        specificity{
+            color: red;
+        }
+        .specificity{
+            color: blue;
+        }
+        #specificity{
+            color: yellow;
+        }
+
+        priority{
+            color: red !important;
+        }
+        .priority{
+            color: blue ;
+        }
+        #priority{
+            color: yellow;
+        }
+
+        pricity{
+            color: red !important;
+        }
+        .pricity{
+            color: blue !important;
+        }
+        #pricity{
+            color: yellow !important;
+        }
+    </style>
+</head>
+<body>
+    <button id="fixedBtn">
+        <a href="index.html"
+            style="color: var(--primary-color); text-decoration: none; z-index: 1; font-size: large; font-weight: bold;"><i
+                class="fas fa-home" style="color: var(--primary-color);"></i>&nbsp;HOME</a>
+    </button>
+    <h1>Miscellenous Topics</h1>
+    <h3>CSS Specificity</h3>
+    <h2>
+        <mark>#id > .class > element</mark>
+    </h2>
+    <specificity id="specificity" class="specificity">Hello World</specificity>
+    <h3>Using the !important rule to change priority of rule applied.</h3>
+    <priority id="priority" class="priority">
+        Hello World
+    </priority>
+    <h3>If provided !important rule at each selector than priority shifts to specificity.</h3>
+    <pricity id="pricity" class="pricity">
+        Hello World
+    </pricity>
+    <h1>Math Functions</h1>
+    <h3>calc() - It is used to calculate values among different units like : </h3>  
+    <p>Basic 800px-500px is given so it takes 300px of width</p>
+    <div class="bd" style="width: calc(800px - 500px); margin-top: 20px;">Hello World</div>
+    <p>% to px - 50% width is given and added 200px to it.</p>
+    <div class="bd" style="width: calc(50% + 200px);">Hello World</div>
+    <p>Outside div font-size 10px given inside div width 2rem (32px) + 1em(10px) = 42px </p>
+    <div class="bd" style="font-size: 10px;">
+        <div class="bd" style="width: calc(2rem + 1em);">Hello World</div>
+    </div>
+    <p>100vw is given to div and 50% subtracting from it to display div in exact half screen even in responsive enivornment.</p>
+    <div class="bd" style="width: calc(100vw - 50%);">Hello World</div>
+    <h3>min() - It is used to select smallest value from the list of values.</h3>
+    <p>50% and 300px is given whichever is the smallest value then it is applied to div's width.</p>
+    <div class="bd" style="width: min(50%, 300px);">Hello World</div>
+    <p>50% and 1200px is given whichever is the smallest value then it is applied to div's width.</p>
+    <div class="bd" style="width: min(50%, 1200px);">Hello World</div>
+    <h3>max() - It is used to select largest value from the list of values.</h3>
+    <p>50% and 300px is given whichever is the smallest value then it is applied to div's width.</p>
+    <div class="bd" style="width: max(50%, 300px);">Hello World</div>
+    <p>50% and 1200px is given whichever is the smallest value then it is applied to div's width.</p>
+    <div class="bd" style="width: max(50%, 1200px);">Hello World</div>
+    <h3>clamp() - It is used to set values dynamically according to screen size within three parameters like : </h3>
+    <h3><code>clamp(minimum (opt), preferred (req), maximum (opt))</code></h3>
+    <div class="bd" style="font-size: clamp(16px, 2vw, 24px);">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam neque vel incidunt deserunt reprehenderit libero dolorem ex molestiae quibusdam, tempora repellendus et eius placeat animi itaque? Ducimus cumque accusantium et sint voluptatibus. Voluptatem animi beatae quasi dolor enim? Soluta sit nesciunt quo delectus nam cupiditate sequi inventore quos deserunt totam.
+    </div>
+</body>
+</html>

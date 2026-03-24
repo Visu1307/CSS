@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transforms</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome-icons/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #088395;
+            --secondary-color: #EBF4F6;
+        }
+        html {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        h1 {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            text-align: center;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        div{
+            text-align: center;
+            background-color: teal;
+        }
+        hr{
+            margin: 50px 0 50px 0;
+        }
+        code{
+            font-size: large;
+        }
+        #fixedBtn {
+            background-color: var(--secondary-color);
+            width: 120px;
+            padding: 10px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            border-radius: 20px;
+            opacity: 0.8;
+            border: 5px solid var(--secondary-color);
+        }
+        .comman{
+            background-color: yellowgreen; color: blue; height: 200px ; width: 200px;
+            transition: transform ease 1s;
+        }
+        .rotateItDeg:hover{
+            transform: rotate(90deg);
+            /* transition: transform ease 1s; */
+        }
+        .rotateItRad:hover{
+            transform: rotate(2rad);
+            /* transition: transform ease 1s; */
+        }
+        .rotateItTurn:hover{
+            transform: rotate(0.3turn);
+            /* transition: transform ease 1s; */
+        }
+        .scaleItHPer:hover{
+            transform: scaleX(30%);
+            /* transition: transform ease 1s; */
+        }
+        .scaleItHFloat:hover{
+            transform: scaleX(0.2);
+            /* transition: transform ease 1s; */
+        }
+        .scaleItVPer:hover{
+            transform: scaleY(30%);
+            /* transition: transform ease 1s; */
+        }
+        .scaleItVFloat:hover{
+            transform: scaleY(0.2);
+            /* transition: transform ease 1s; */
+        }
+        .scaleIt:hover{
+            transform: scale(30%, 0.6);
+            /* transition: transform ease 1s; */
+        }
+        .translateIt:hover{
+            transform: translate(20%, 20px);
+            /* transition: transform ease 1s; */
+        }
+        .skewHD:hover{
+            transform: skewX(45deg);
+            /* transition: transform ease 1s; */
+        }
+        .skewVD:hover{
+            transform: skewY(45deg);
+            /* transition: transform ease 1s; */
+        }
+        .skewD:hover{
+            transform: skew(45deg, -60deg);
+            /* transition: transform ease 1s; */
+        }
+        .matrixShow:hover{
+            transform: matrix(1, -0.3, 0, 1, 50, 0);
+            /* transition: transform ease 1s; */
+        }
+        .rotateItX:hover{
+            transform: rotateX(45deg);
+            /* transition: transform ease 1s; */
+        }
+        .rotateItY:hover{
+            transform: rotateY(45deg);
+            /* transition: transform ease 1s; */
+        }
+        .rotateItZ:hover{
+            transform: rotateZ(45deg);
+            /* transition: transform ease 1s; */
+        }
+        .translateItZ:hover{
+            transform: translateZ(45%);
+        }
+        .transistDemo{
+            transition: background-color 5s ease-in;
+        }
+        .transistDemo:hover{
+            background-color: #088395;
+            /* transition: background-color ease-out 1s; */
+        }
+        .easeDemo{
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 30px;
+            margin-top: 50px;
+        }
+        .ease,.easeIN,.easeOUT,.easeINOUT{
+            background-color: yellowgreen;
+            color: blue;
+            width: 200px;
+            height: 200px;
+        }
+        .ease{
+            transition: transform 5s ease;
+        }
+        .easeIN{
+            transition: transform 5s ease-in;
+        }
+        .easeOUT{
+            transition: transform 5s ease-out;
+        }
+        .easeINOUT{
+            transition: transform 5s ease-in-out;
+        }
+        .hovMe{
+            border: 2px  solid black;
+        }
+        .hovMe:hover .ease{
+            transform : translateX(500px)
+        }
+        .ease:hover{
+            transform : translateX(500px)
+        }
+        .easeIN:hover{
+            transform : translateX(500px)
+        }
+        .easeOUT:hover{
+            transform : translateX(500px)
+        }
+        .easeINOUT:hover{
+            transform : translateX(500px)
+        }
+    </style>
+</head>
+<body>
+    <button id="fixedBtn">
+        <a href="index.html"
+            style="color: var(--primary-color); text-decoration: none; z-index: 1; font-size: large; font-weight: bold;"><i
+                class="fas fa-home" style="color: var(--primary-color);"></i>&nbsp;HOME</a>
+    </button>
+    <h1>Transforms 2D</h1>
+    <p>The CSS transform property applies a 2D or 3D transformation to an element.</p>
+    <p>This property allows you to rotate, scale, move, and skew elements.</p>
+    <h3>2D Transform Translate</h3>
+    <p>Mouse over the element below to see a 2D transformation.</p>
+    <p><code>translate(x,y)</code> - It moves the element towards provided coordinates.</p>
+    <div class="translateIt comman">
+        2D Transform Translate(%,px)
+    </div>
+    <h3>2D Transform Rotate</h3>
+    <p>Mouse over the element below to see a 2D transformation.</p>
+    <p><code>rotate(deg/rad/turn)</code> - 90deg</p>
+    <div class="rotateItDeg comman">
+        2D Transform Rotate Degree
+    </div>
+    <p><code>rotate(deg/rad/turn)</code> - 2rad (Radian)</p>
+    <div class="rotateItRad comman">
+        2D Transform Rotate Radian
+    </div>
+    <p><code>rotate(deg/rad/turn)</code> - 0.3turn</p>
+    <div class="rotateItTurn comman">
+        2D Transform Rotate Turn
+    </div>
+    <h3>2D Transform ScaleX</h3>
+    <p>Mouse over the element below to see a 2D transformation.</p>
+    <p><code>scaleX(%/float)</code> - 30%</p>
+    <div class="scaleItHPer comman">
+        2D Transform scaleX %
+    </div>
+    <p><code>scaleX(%/float)</code> - 0.5</p>
+    <div class="scaleItHFloat comman">
+        2D Transform scaleX 0.X
+    </div>
+    <h3>2D Transform ScaleY</h3>
+    <p>Mouse over the element below to see a 2D transformation.</p>
+    <p><code>scaleY(%/float)</code> - 30%</p>
+    <div class="scaleItVPer comman">
+        2D Transform scaleY %
+    </div>
+    <p><code>scaleY(%/float)</code> - 0.5</p>
+    <div class="scaleItVFloat comman">
+        2D Transform scaleY 0.X
+    </div>
+    <h3>2D Transform Scale</h3>
+    <p>Mouse over the element below to see a 2D transformation.</p>
+    <p><code>scale(x, y)</code> - 30% (HORIZANTAL) , 0.6 (VERTICAL)</p>
+    <div class="scaleIt comman">
+        2D Transform scale %, 0.X
+    </div>
+    <h3>2D Transform Skew</h3>
+    <p>Mouse over the element below to see a 2D transformation.</p>
+    <p><code>skewX(deg)</code> - 45deg (HORIZANTAL)</p>
+    <div class="comman skewHD">
+        2D Transform SkewX(deg)
+    </div>
+    <p><code>skewY(deg)</code> - 45deg (VERTICAL)</p>
+    <div class="comman skewVD">
+        2D Transform SkewY(deg)
+    </div>
+    <p><code>skew(x,y)</code> - 45deg (HORIZANTAL), -60deg (VERTICAL)</p>
+    <div class="comman skewD">
+        2D Transform Skew(x,y)
+    </div>
+    <h3>2D Transform Matrix</h3>
+    <p><code>matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())</code></p>
+    <div class="comman matrixShow">
+        2D Transform Matrix(X, 0.X)
+    </div>
+    <h1>Transforms 3D</h1>
+    <h3>3D Transform Element</h3>
+    <p><code>rotateX(deg/rad/turn)</code> - It flips element on horizantal axis.</p>
+    <div class="comman rotateItX">
+        3D<br>RotateX(45deg)
+    </div>
+    <p><code>rotateY(deg/rad/turn)</code> - It flips element on vertical axis.</p>
+    <div class="comman rotateItY">
+        3D<br>RotateY(45deg)
+    </div>
+    <p><code>rotateZ(deg/rad/turn)</code> - It flips element on z axis.</p>
+    <div class="comman rotateItZ">
+        3D<br>RotateZ(45deg)
+    </div>
+    <p><code>translateZ(px/%)</code> - It flips element on z axis. (NOT VISIBLE)</p>
+    <div class="comman translateItZ">
+        3D<br>TranslateZ(45%)
+    </div>
+    <h1>Transition</h1>
+    <h3>CSS transitions allows you to change property values smoothly, over a given duration.</h3>
+    <p><code>transition: property duration timing-function delay|initial|inherit;</code></p>
+    <p><code>transition : background-color 3s ease</code></p>
+    <div class="comman transistDemo">
+        Hover Over Me!
+    </div>
+    <div class="easeDemo">
+        <p>ease = slow - fast - slow</p>
+        <div class="hovMe">
+            <div class="ease">
+                Ease
+            </div>
+        </div>
+        <p>ease in = slow - fast - fast</p>
+        <div class="easeIN">
+            Ease IN
+        </div>
+        <p>ease out = fast - fast - slow</p>
+        <div class="easeOUT">
+            Ease OUT
+        </div>
+        <p>ease in out = slow - fast - slow</p>
+        <div class="easeINOUT">
+            Ease IN OUT
+        </div>
+    </div>
+</body>
+</html>
