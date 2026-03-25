@@ -101,6 +101,18 @@ th,td:hover{
     color: violet;
 }
 
+.nested_list :first-child{
+    color: red;
+}
+
+.nested_list :last-child{
+    color: blue;
+}
+
+.nested_list :nth-child(2){
+    color: yellow;
+}
+
 .after_demo::after{
     content: "Hello World";
     color: black;
