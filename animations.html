@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <link rel="stylesheet" href="fontawesome-icons/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary-color: #088395;
+            --secondary-color: #EBF4F6;
+        }
+        html {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        h1 {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            text-align: center;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        div{
+            text-align: center;
+            background-color: teal;
+        }
+        hr{
+            margin: 50px 0 50px 0;
+        }
+        code{
+            font-size: large;
+        }
+        #fixedBtn {
+            background-color: var(--secondary-color);
+            width: 120px;
+            padding: 10px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            border-radius: 20px;
+            opacity: 0.8;
+            border: 5px solid var(--secondary-color);
+        }
+        .comman{
+            background-color: yellowgreen; color: blue; height: 150px ; width: 200px;
+        }
+        code{
+            font-size: x-large;
+        }
+        button{
+            background-color: blue;
+            color: white;
+            font-size: larger;
+            border-radius: 20px;
+            padding: 10px;
+        }
+        @keyframes firstAnimation {
+            from { background-color: yellowgreen; }
+            to { background-color: white; }
+        }
+        .animateIt{
+            animation-name: firstAnimation;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes animateIntervals {
+            0% { background-color: red; }
+            25% { background-color: blue; }
+            50% { background-color: green; }
+            75% { background-color: yellow; }
+            100% { background-color: violet; }
+        }
+        .animatePart:hover{
+            animation-name: animateIntervals;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            color: black;
+        }
+        @keyframes moveH {
+            0%{ transform: translateX(0px); }
+            25%{ transform: translateX(100px); }
+            50%{ transform: translateX(200px); }
+            75%{ transform: translateX(100px); }
+            100%{ transform: translateX(0px); }
+        }
+        .moveX:hover{
+            animation-name: moveH;
+            animation-duration: 5s;
+            animation-delay: 2s;
+        }
+        @keyframes demo {
+            0% { transform: translateY(0%); }
+            50% { transform: translateY(100%); }
+            100% { transform: translateY(0%); }
+        }
+        .easeTime{
+            animation-name: demo;
+            animation-duration: 4s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+        }
+        .linearTime{
+            animation-name: demo;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        .easeInTime{
+            animation-name: demo;
+            animation-duration: 4s;
+            animation-timing-function: ease-in;
+            animation-iteration-count: infinite;
+        }
+        .easeOutTime{
+            animation-name: demo;
+            animation-duration: 4s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+        .easeInOutTime{
+            animation-name: demo;
+            animation-duration: 4s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes changeColor {
+            from { background-color: yellow; }
+            to { background-color: violet; }
+        }
+        .animateDir:hover{
+            animation-name: changeColor;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-delay: 0s;
+            animation-direction: reverse;
+        }
+        .animateAlt:hover{
+            animation-name: changeColor;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-delay: 0s;
+            animation-direction: alternate;
+            animation-iteration-count: 2;
+        }
+        .animateAltRev:hover{
+            animation-name: changeColor;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-delay: 0s;
+            animation-direction: alternate-reverse;
+            animation-iteration-count: 2;
+        }
+        @keyframes fillDemo {
+            from { background-color: red; }
+            to { background-color: black; }
+        }
+        .fillNone:hover{
+            animation-name: fillDemo;
+            animation-duration: 4s;
+            animation-fill-mode: none;
+        }
+        .fillForwards:hover{
+            animation-name: fillDemo;
+            animation-duration: 4s;
+            animation-fill-mode: forwards;
+        }
+        .fillBackwards:hover{
+            animation-name: fillDemo;
+            animation-duration: 4s;
+            animation-delay: 2s;
+            animation-fill-mode: backwards;
+        }
+        .fillBoth:hover{
+            animation-name: fillDemo;
+            animation-duration: 4s;
+            animation-delay: 2s;
+            animation-fill-mode: both;
+        }
+        @keyframes animateMe {
+            0%{
+                background-color: red;
+            }
+            50%{
+                background-color: yellow;
+                color: black;
+                transform: translateX(100%);
+            }
+            100%{
+                background-color: violet;
+                color: white;
+                transform: translateX(0);
+            }
+        }
+        .animateAll:hover{
+            animation: animateMe 5s linear 2s infinite alternate;
+        }
+    </style>
+</head>
+<body>
+    <button id="fixedBtn">
+        <a href="index.html"
+            style="color: var(--primary-color); text-decoration: none; z-index: 1; font-size: large; font-weight: bold;"><i
+                class="fas fa-home" style="color: var(--primary-color);"></i>&nbsp;HOME</a>
+    </button>
+    <h1>Animations</h1>
+    <p>CSS allows animation of HTML elements without using JavaScript!</p>
+    <p>An animation lets an element gradually change from one style to another.</p>
+    <p><code>@keyframes identifier{ from {proeprty;} to {property;} }</code></p>
+    <div class="comman animateIt">
+        Animated Color Change
+    </div>
+    <p><code>animation-name : identifier</code> - It identifies which animation should be applied to particular element.</p>
+    <p><code>animation-duration : seconds</code> - It ensures that animation should run for provided duration.</p>
+    <p><code>animation-iterate-count : n/infinite</code> - It defines number of iterations for animation.</p>
+    <h3>Hover over the element to see the change.</h3>
+    <div class="comman animatePart">
+        I will change my BG color at each 2s
+    </div>
+    <p><code>@keyframes identifier { 0%{property;} 25%{property;} 50%{property;} 75%{property;} 100%{property;} }</code></p>
+    <p>It will be divided among the given time duration.</p>
+    <p>For e.g. if time duration 10s given then 10s (duration) / 5 (no. of proeprty) = 2s to each property.</p>
+    <h3>Animation Delay</h3>
+    <p><code>animation-delay : seconds</code> - It defines delay in starting an animation.</p>
+    <div class="comman moveX">
+        I will be moving after 2s of hovering.
+    </div>
+    <p>Total Animation Time : 5s - Delay Time : 2s = Runnable Animation Time 3s.</p>
+    <h3>CSS animation-timing-function property</h3>
+    <button id="startAnimation">Start</button>
+    <button id="stopAnimation">Stop</button>
+    <div style="height: 600px; column-gap: 50px;">
+        <div id="et" class="comman">
+            Ease
+        </div>
+        <div id="lt" class="comman">
+            Linear
+        </div>
+        <div id="eit" class="comman">
+            Ease-In
+        </div>
+        <div id="eot" class="comman">
+            Ease-Out
+        </div>
+        <div id="eiot" class="comman">
+            Ease In-Out
+        </div>
+    </div>
+    <h3>Animation Properties</h3>
+    <p><code>animation-direction : (normal/reverse/alternate/alternate-reverse)</code> - It  specifies whether an animation should be played forwards, backwards or in alternate cycles.</p>
+    <p>Hover over the element to see the <mark>reversed</mark> effect.</p>
+    <div class="comman animateDir">
+        Animation Reversed
+    </div>
+    <p>Hover over the element to see the <mark>alternate</mark> effect.</p>
+    <p>yellow - violet - yellow</p>
+    <div class="comman animateAlt">
+        Animation Alternate
+    </div>
+    <p>Hover over the element to see the <mark>alternate-reverse</mark> effect.</p>
+    <p>violet - yellow - violet</p>
+    <div class="comman animateAltRev">
+        Animation Alternate Reverse
+    </div>
+    <h3>CSS animation-fill-mode property</h3>
+    <p>CSS animations do not affect an element before the first keyframe is played or after the last keyframe is played. The animation-fill-mode property can override this behavior.</p>
+    <p><code>animation-fill-mode : (none/forwards/backwards/both)</code> - It specifies a style for the target element when the animation is not playing (before it starts, after it ends, or both).</p>
+    <div class="comman fillNone">
+        It preserves normal style.
+    </div>
+    <p><code>animation-fill-mode : forwards</code> - It preserves the last keyframe style applied that is <mark>BLACK</mark> color in our case.</p>
+    <div class="comman fillForwards">
+        It preserves LAST keyframe style applied.
+    </div>
+    <p><code>animation-fill-mode : backwards</code> - It preserves the first keyframe style applied that is <mark>RED</mark> color in our case.</p>
+    <p>NOTICEABLE only when <code>animation-delay</code> is given.</p>
+    <div class="comman fillBackwards">
+        It preserves FIRST keyframe style applied.
+    </div>
+    <p><code>animation-fill-mode : both</code> - It preserves the both first and last keyframe style applied that is <mark>RED</mark> AND <mark>BLACK</mark> color in our case.</p>
+    <div class="comman fillBoth">
+        It preserves FIRST & LAST keyframes style applied.
+    </div>
+    <h3>CSS Animation Short-Hand Property.</h3>
+    <p><code>animation: name duration timing-function delay iteration-count direction fill-mode</code> - It allows defining all animation properties combined in single property.</p>
+    <div class="comman animateAll">
+        All properties at once.
+    </div>
+</body>
+<script>
+    const start = document.getElementById("startAnimation");
+    const stop = document.getElementById("stopAnimation");
+
+    const et = document.getElementById("et");
+    const lt = document.getElementById("lt");
+    const eit = document.getElementById("eit");
+    const eot = document.getElementById("eot");
+    const eiot = document.getElementById("eiot");
+
+    start.addEventListener('click', ()=> {
+        if(!et.classList.contains("easeTime")){
+            et.classList.add("easeTime")
+            lt.classList.add("linearTime")
+            eit.classList.add("easeInTime")
+            eot.classList.add("easeOutTime")
+            eiot.classList.add("easeInOutTime")
+        }
+    })
+
+    stop.addEventListener('click', ()=>{
+        if(et.classList.contains("easeTime")){
+            et.classList.remove("easeTime")
+            lt.classList.remove("linearTime")
+            eit.classList.remove("easeInTime")
+            eot.classList.remove("easeOutTime")
+            eiot.classList.remove("easeInOutTime")
+        }
+    })
+</script>
+</html>
