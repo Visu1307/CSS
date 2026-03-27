@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome-icons/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Media Query</title>
+    <style>
+        :root {
+            --primary-color: #088395;
+            --secondary-color: #EBF4F6;
+        }
+        html {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        h1 {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            text-align: center;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        div{
+            text-align: center;
+            background-color: teal;
+        }
+        hr{
+            margin: 50px 0 50px 0;
+        }
+        code{
+            font-size: x-large;
+        }
+        #fixedBtn {
+            background-color: var(--secondary-color);
+            width: 120px;
+            padding: 10px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            border-radius: 20px;
+            opacity: 0.8;
+            border: 5px solid var(--secondary-color);
+        }
+        .comman{
+            background-color: yellowgreen; color: blue; height: 150px ; width: 200px; margin-top: 20px;
+        }
+        @media all {
+            .testAll{
+               background-color: yellow; 
+            }
+        }
+        @media not all {
+            .testAll{
+               background-color: red; 
+            }
+        }
+        @media print {
+            .testPrint{
+                background-color: blue;
+                color: white;
+                font-size: large;
+            }
+        }
+        @media screen and (max-height : 600px){
+            .maxHeight{
+                background-color: brown;
+                color: white;
+            }
+        }
+        @media screen and (min-height : 600px){
+            .minHeight{
+                background-color: violet;
+                color: black;
+            }
+        }
+        @media screen and (min-height : 600px) and (max-height : 800px) {
+            .minmaxHeight{
+                background-color: black;
+                color: white;
+            }
+        }
+        @media screen and (max-width : 600px){
+            .maxWidth{
+                background-color: aqua;
+                color: black;
+            }
+        }
+        @media screen and (min-width : 600px){
+            .minWidth{
+                background-color: chocolate;
+                color: black;
+            }
+        }
+        @media screen and (min-width : 600px) and (max-width : 800px){
+            .minmaxWidth{
+                background-color: purple;
+                color: white;
+            }
+        }
+        @media screen and (orientation : landscape) {
+            .land{
+                background-color: powderblue;
+            }
+        }
+        @media screen and (orientation : portrait) {
+            .port{
+                background-color: orange;
+            }
+        }
+        @media screen and (aspect-ratio : 1/1) {
+            .aspectR1{
+                background-color: turquoise;
+            }
+        }
+        @media screen and (aspect-ratio : 4/3) {
+            .aspectR2{
+                background-color: peachpuff;
+            }
+        }
+        @media screen and (aspect-ratio : 16/9) {
+            .aspectR3{
+                background-color: crimson;
+                color: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button id="fixedBtn">
+        <a href="index.html"
+            style="color: var(--primary-color); text-decoration: none; z-index: 1; font-size: large; font-weight: bold;"><i
+                class="fas fa-home" style="color: var(--primary-color);"></i>&nbsp;HOME</a>
+    </button>
+    <h1>Media Queries</h1>
+    <p>CSS media queries allow you to apply styles based on the characteristics of a device or the environment displaying the web page.</p>
+    <p>CSS media queries are essential for creating responsive web pages.</p>
+    <p>The CSS <code>@media</code> rule is used to add media queries to your style sheet.</p>
+    <h3>Media Query Syntax</h3>
+    <code>
+        <!-- <pre> -->
+            @media [not] media-type and (media-feature: value) and (media-feature: value) { <br>
+                /* CSS rules to apply */ <br>
+            }
+        <!-- </pre> -->
+    </code>
+    <h3>CSS Media Types</h3>
+    <ul>
+        <li>all - Default value if not specified works in all devices.</li>
+        <li>print - Here you can specify how to display and style elements in print preview mode.</li>
+        <li>screen - Specify deisgn rules for computer, tablet, mobile etc. devices.</li>
+    </ul>
+    <h3>media-type : all</h3>
+    <code>
+        @media all {
+            .testAll{
+               background-color: yellow; 
+            }
+        }
+    </code>
+    <div class="comman testAll">
+        Hello World
+    </div>
+    <h3>media-type : all</h3>
+    <code>
+        @media not all {
+            .testAll{
+               background-color: red; 
+            }
+        }
+    </code>
+    <div class="comman testAll">
+        Hello World
+    </div>
+    <h3>media-type : print</h3>
+    <code>
+        @media print {
+            .testPrint{
+                background-color: blue;
+                color: white;
+                font-size: large;
+            }
+        }
+    </code>
+    <div class="comman testPrint">
+        Hello World
+    </div>
+    <h3>media-type : screen</h3>
+    <p>It is used along with certain parameters such as : </p>
+    <ul>
+        <li>max-height : Maximum height of the viewport</li>
+        <li>min-height : Minimum height of the viewport</li>
+        <li>max-width : Maximum width of the viewport</li>
+        <li>min-width : Minimum width of the viewport</li>
+    </ul>
+    <h3>max-height - 600px, <mark>Style <= 600px < Default.</mark></h3>
+    <code>
+        @media screen and (max-height : 600px){
+            .maxHeight{
+                background-color: brown;
+                color: white;
+            }
+        }
+    </code>
+    <div class="comman maxHeight">
+        Max Height 600px
+    </div>
+    <h3>min-height - 600px, <mark> Default < 600px <= Style.</mark></h3>
+    <code>
+        @media screen and (min-height : 600px){
+            .minHeight{
+                background-color: violet;
+                color: black;
+            }
+        }
+    </code>
+    <div class="comman minHeight">
+        Min Height 600px
+    </div>
+    <h3>min-height - 600px AND max-height - 800px, <mark>Default < 600px <= Style <= 800 < Default.</mark></h3>
+    <code>
+        @media screen and (min-height : 600px) and (max-height : 800px) {
+            .minmaxHeight{
+                background-color: black;
+                color: white;
+            }
+        }
+    </code>
+    <div class="comman minmaxHeight">
+        Min Max Height
+    </div>
+    <h3>max-width - 600px, <mark>Style <= 600px < Default</mark></h3>
+    <code>
+        @media screen and (max-width : 600px){
+            .maxWidth{
+                background-color: aqua;
+                color: black;
+            }
+        }
+    </code>
+    <div class="comman maxWidth">
+        Max Width 600px
+    </div>
+    <h3>min-width - 600px, <mark>Default < 600px <= Style</mark></h3>
+    <code>
+        @media screen and (min-width : 600px){
+            .minWidth{
+                background-color: chocolate;
+                color: black;
+            }
+        }
+    </code>
+    <div class="comman minWidth">
+        Min Width 600px
+    </div>
+    <h3>min-width - 600px AND max-width - 800px, <mark>Default < 600px <= Style <= 800px < Default </mark></h3>
+    <code>
+        @media screen and (min-width : 600px){
+            .minWidth{
+                background-color: purple;
+                color: white;
+            }
+        }
+    </code>
+    <div class="comman minmaxWidth">
+        Min 600px Width<br>Max 800px Width
+    </div>
+    <h3>Media Queries for Screen Orientation</h3>
+    <h4>orientation : landscape</h4>
+    <code>
+        @media screen and (orientation : landscape) {
+            .land{
+                background-color: powderblue;
+            }
+        }
+    </code>
+    <div class="comman land">
+        Hello World!<br>It's Landscape
+    </div>
+    <h4>orientation : portrait</h4>
+    <code>
+        @media screen and (orientation : portrait) {
+            .port{
+                background-color: orange;
+            }
+        }
+    </code>
+    <div class="comman port">
+        Hello World!<br>It's Portrait
+    </div>
+    <h3>Media Queries for aspect ratio</h3>
+    <p>There are various different aspect ratios such as 1:1, 4:3, 16:9 etc.</p>
+    <p>We can define query for each of them by : </p>
+    <code></code>
+    <div class="comman aspectR1">
+        Hello World!<br>This is aspect ratio 1:1
+    </div>
+    <p>Tip : To demonstrate output of 1:1 set width = height.</p>
+    <div class="comman aspectR2">
+        Hello World!<br>This is aspect ratio 4:3
+    </div>
+    <p>Tip : To demonstrate output of 4:3 set width = 400 and height = 300.</p>
+    <div class="comman aspectR3">
+        Hello World!<br>This is aspect ratio 16:9
+    </div>
+    <p>Tip : To demonstrate output of 16:9 set width = 800 and height = 450.</p>
+</body>
+</html>
